@@ -1,0 +1,82 @@
+/*======================================================================*\
+==========================================================================
+
+							BASE NAV ADMIN
+
+==========================================================================
+\*======================================================================*/
+
+.cb-adminTools {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	bottom: 0;
+	//width: 100%;
+	padding: $space--xs;
+	background-color: #000;
+	@extend %transition;
+	@include flex(space--between center);
+
+	@media screen and (max-width: $break--m) {
+		display: none;
+	}
+
+	&.is-off {
+		transform: translateY(100%);
+	}
+}
+
+.cb-adminTools__area {
+	flex: 1 0 30%;
+
+	&:nth-child(2) {
+		text-align: center;
+	}
+
+	&:nth-child(3) {
+		text-align: right;
+	}
+}
+
+.cb-adminTools__area__bt {
+	position: relative;
+	//@extend .t-miniH;
+	color: #fff;
+	padding: $space--xs  $space--s;
+
+	&::after {
+		content: '';
+		position: absolute;
+		height: 2px;
+		width: 0;
+		left: 0;
+		bottom: 0;
+		background-color: $c-main;
+		@extend %transition;
+	}
+
+	&:hover {
+		color: $c-main;
+
+		&::after {
+			width: 100%;
+		}
+	}
+
+	&--grid {
+
+		@media screen and (max-width: $break--xl) {
+			display: none;
+		}
+	}
+
+	&--admin {
+		margin-left: auto;
+	}
+
+	&--edit {
+		margin-right: auto;
+	}
+}
+
+

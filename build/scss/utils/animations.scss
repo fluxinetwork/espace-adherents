@@ -1,0 +1,38 @@
+/*======================================================================*\
+==========================================================================
+
+							ANIMATION
+
+==========================================================================
+\*======================================================================*/
+
+
+//=================================================================== SPIN
+
+@keyframes spin {
+	from {transform: rotate(0);}
+	to {transform: rotate(360deg);}
+}
+
+.anim-spin {
+	animation: 1s spin infinite linear;
+
+	.icon1 {
+		display: none;
+	}
+
+	.icon2 {
+		display: block !important;
+	}
+}
+
+@keyframes scaleUp {
+	from {transform: scale(0);}
+	to {transform: scale(1);}
+}
+
+@keyframes pulseBg {
+	0% {background-color: rgba(#fff, 0);}
+	50% {background-color: rgba(#fff, 0.3);}
+	100% {background-color: rgba(#fff, 0);}
+}

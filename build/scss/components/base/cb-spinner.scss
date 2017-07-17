@@ -1,0 +1,21 @@
+/*======================================================================*\
+==========================================================================
+
+							BASE SPINNER
+
+==========================================================================
+\*======================================================================*/
+
+.cb-spinner {
+	width: 14px;
+	@include square();
+	border: 2px solid $c-main;
+	border-top-color: transparent;
+	border-radius: 50%;
+	background-color: transparent;
+	animation: 0.8s linear infinite spin;
+
+	&--white {
+		border-color: #fff;
+	}
+}

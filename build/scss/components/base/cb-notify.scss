@@ -1,0 +1,40 @@
+/*======================================================================*\
+==========================================================================
+
+							BASE NOTIFY
+
+==========================================================================
+\*======================================================================*/
+
+.cb-notify {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	bottom: 0;
+	background-color: $c-dark;
+	transform: translateY(100%);
+	@include transition(transform);
+
+	&.is-open {
+		transform: translateY(0%);
+	}
+}
+
+.cb-notify__content {
+	@extend .l-cell;
+	@include flex(space-between center);
+}
+
+.cb-notify__message {
+	@extend .h3;
+	font-family: $font-h;
+	color: #fff;
+}
+
+.cb-notify__btn {
+	cursor: pointer;
+	flex: none;
+	color: #fff;
+	font-family: $font-bt;
+	@extend .h4
+}

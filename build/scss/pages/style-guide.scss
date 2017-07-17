@@ -1,0 +1,29 @@
+/*======================================================================*\
+==========================================================================
+
+							STYLE GUIDE
+
+==========================================================================
+\*======================================================================*/
+
+.style-guide__section {
+	border-bottom: 1px solid rgba($c-dark, 0.2);
+}
+
+.style-guide__section-title {
+	@extend .h4;
+	text-transform: uppercase;
+	padding: $space--s;
+	background-color: $c-dark;
+	color: #fff;
+}
+
+.style-guide-element {
+	width: 70px;
+
+	&:before {
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+}

@@ -1,0 +1,164 @@
+/*======================================================================*\
+==========================================================================
+
+								FLUXI CONTENT
+
+==========================================================================
+\*======================================================================*/
+
+.fc {
+}
+
+//============================================================ PARAGRAPHE
+
+.fc p {
+	&:not(.fc-link) a {
+		color: $c-accent;
+		font-weight: 700;
+	}
+}
+
+//================================================================= ITEM
+
+.fc-item {
+	margin: $space--l*$smaller 0;
+	display: block;
+
+	> * {
+		margin: 0 auto;
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+
+	@media screen and(min-width: $break--m) {
+		margin: $space--l 0;
+	}
+
+	@media screen and(min-width: $break--l) {
+		margin: $space--l*$bigger 0;
+	}
+
+	+ .fc-item {
+		margin-top: 0;
+	}
+} 
+
+
+//======================================================= TITLE & SUBTITLE
+
+.fc-title {
+}
+
+.fc-subtitle {
+}
+
+
+//================================================================= LISTES
+
+.fc-list {
+	padding-left: $space--s;
+	margin-top: $space--xs;
+
+	@media screen and(min-width: $break--m) {
+		padding-left: 21px;
+	}
+}
+
+.fc-list__item {
+	@extend .p;
+	margin-top: $space--xs;
+}
+
+
+//================================================================= BUTTON
+
+.fc-link{
+	&--bt {
+		display: inline-block;
+		margin-right: $space--s;
+	}
+
+	+ p:not(.fc-link) {
+		margin-top: $space--l*$smaller;
+
+		@media screen and(min-width: $break--m) {
+			margin-top: $space--l;
+		}
+
+		@media screen and(min-width: $break--l) {
+			margin-top: $space--l*$bigger;
+		}
+	}
+}
+
+
+//============================================================= BLOCKQUOTE
+
+.fc-blockquote {
+	position: relative;
+	margin-left: 0;
+	@extend .l-cell;
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+
+	&::before,
+	&::after {
+	}
+
+	&::after {
+	}
+}
+
+.fc-blockquote__title {
+	@extend .fc-title;
+}
+
+
+//============================================================== ACCORDEON
+
+.fc-accordeon {
+	position: relative;
+}
+
+.fc-accordeon__header {
+	cursor: pointer;
+	@include flex(space-between center, false, false);
+}
+
+.fc-accordeon__header__icon {
+	flex: none;
+	padding-left: $space--s;
+}
+
+.fc-accordeon__content {
+	padding: $space--s 0;
+}
+
+
+//================================================================= FIGURE
+
+.fc-figure {
+
+	img {
+		margin: 0 auto;
+		width: 100%;
+	}
+}
+
+.fc-figure__caption {
+}
+
+
+//================================================================== FOCUS
+
+.fc-focus {
+}
+
+.fc-focus__content {
+}

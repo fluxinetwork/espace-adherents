@@ -1,0 +1,46 @@
+/*======================================================================*\
+==========================================================================
+
+							LAYOUT BASE FLEXGRID
+
+==========================================================================
+\*======================================================================*/
+
+$break: $break--s;
+
+.l-flexGrid {
+	@include flex(null, true);
+	
+	@media screen and (min-width: $break) {
+		flex-direction: row;
+	}
+}
+
+.l-flexGrid__item {
+	flex: 1 0 100%;
+	padding: $gutter/2 0;
+
+	&--first,
+	&:first-child {
+		padding-top: 0;
+	}
+
+	&--last,
+	&:last-child {
+		padding-bottom: 0;
+	}
+
+	@media screen and (min-width: $break) {
+		flex: 1 0 0%;
+		padding: 0 $gutter/2;
+
+		&--first,
+		&:first-child {
+			padding-left: 0;
+		}
+
+		&:last-child {
+			padding-right: 0;
+		}
+	}
+}

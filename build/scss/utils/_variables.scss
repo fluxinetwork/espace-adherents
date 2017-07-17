@@ -1,0 +1,131 @@
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+//                               VARIABLES
+
+//////////////////////////////////////////////////////////////////////////
+//////////////////////////////////////////////////////////////////////////
+
+
+////////////////////////////////////////////////////////////// BREAKPOINTS
+
+$breakpoints: (
+  small: 480px,
+  medium: 760px, 
+  large: 1050px,
+  xlarge: 1200px,
+);
+
+$break--s: map-get($breakpoints, small);
+$break--m: map-get($breakpoints, medium);
+$break--l: map-get($breakpoints, large);
+$break--xl: map-get($breakpoints, xlarge);
+
+
+/////////////////////////////////////////////////////////////////// SPACES
+
+$space: 8px;
+$space--xs: $space*1;
+$space--s: $space*2;
+$space--m: $space*3;
+$space--l: $space*5;
+$space--xl: $space*10;
+$space--xxl: $space*20;
+
+$bigger: 1.3;
+$smaller: 0.7;
+
+$gutter: $space--m;
+
+
+/////////////////////////////////////////////////////////////////// COLORS
+
+$c-main: blue;
+$c-accent: orange;
+$c-dark: black;
+$c-light: lightgrey;
+$c-txt: $c-dark;
+$c-error: #F13636;
+$c-valid: #00C15F;
+
+$bg-grid-tmp: transparent;
+$grid-tmp: false;
+@if ($grid-tmp) {
+	$bg-grid-tmp: rgba($c-valid, 0.2);
+}
+
+$c-facebook: #3b5998;
+$c-twitter: #1da1f2;
+$c-youtube: #cd201f;
+$c-linkedin: #0077b5;
+
+
+//////////////////////////////////////////////////////////////////// TYPO
+
+$font-h: sans-serif;
+$font-txt: serif;
+$font-mono: monospace;
+$font-bt: $font-h;
+
+$font-base-size: 16px;
+$font-base-lh: 1.3;
+
+$h0-font-sizes: (
+	null : (61px)
+);
+
+$h1-font-sizes: (
+	null : (22px),
+	medium : (28px),
+	large : (40px, 1.15),
+	xlarge : (45px, 1.2)
+);
+
+$h2-font-sizes: (
+	null : (18px),
+	medium : (21px),
+	large : (26px, 1.4),
+	xlarge : (29px)
+);
+
+$h3-font-sizes: (
+	null : (16px),
+	medium : (18px),
+	large : (19px),
+	xlarge : (21px)
+);
+
+$h4-font-sizes: (
+	null : (14px),
+	medium : (17px),
+	large : (18px),
+	xlarge : (19px)
+);
+
+$h5-font-sizes: (
+	null : (12px),
+	medium : (13px),
+	large : (14px),
+	xlarge : (16px)
+);
+
+$h6-font-sizes: (
+	null : (9px),
+	medium : (10px),
+	large : (11px),
+	xlarge : (12px)
+);
+
+
+//////////////////////////////////////////////////////////////////// SIZES
+
+$contentW: 750px;
+$maxW: 1200px;
+$navMaxW: 1400px;
+
+
+/////////////////////////////////////////////////////////////////// STYLES
+
+$radius: 2px;
+$border: 1px solid $c-dark;
+
