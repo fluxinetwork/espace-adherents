@@ -1,28 +1,38 @@
 <?php
 
-get_header(); 
+get_header();
 
-if ( is_singular('post') ) {
-	$class = 'article';
-} else if ( is_singular('repertoire') ) {
-	$class = 'repertoire';
-}
-
-echo '<article class="'.$class.'">';
+echo '<article>';
 
 	if ( have_posts() ) :
 
-		while ( have_posts() ) : the_post();   
+		while ( have_posts() ) : the_post();
 
-			if ( is_singular('post') ) {
+			if ( is_singular('post') ) :
 
 				get_template_part( 'page-templates-parts/content', 'single' );
 
-			} else if ( is_singular('repertoire') ) {
+			elseif ( is_singular('repertoire') ) :
 
 				get_template_part( 'page-templates-parts/content', 'repertoire' );
-				
-			}
+
+			elseif ( is_singular('formation') ) :
+
+				get_template_part( 'page-templates-parts/content', 'formation' );
+
+			elseif ( is_singular('webinaire') ) :
+
+				get_template_part( 'page-templates-parts/content', 'webinaire' );
+
+			elseif ( is_singular('partage_document') ) :
+
+				get_template_part( 'page-templates-parts/content', 'document' );
+
+			elseif ( is_singular('question') ) :
+
+				get_template_part( 'page-templates-parts/content', 'question' );
+
+			endif;
 
 		endwhile;
 
