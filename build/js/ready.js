@@ -21,7 +21,6 @@ var FOO = {
     home: {
         init: function() {
             isHome = true;
-            initMap();
         }
     },
     js_contact_form: {

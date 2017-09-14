@@ -46,6 +46,15 @@ var iconShadow = {
 };*/
 
 
+/*
+ * Ready
+ * - launch map
+ */
+
+jQuery( document ).ready(function(e) {
+    initMap();
+});
+
 
 /*
  * Init Adherents Map
@@ -400,7 +409,7 @@ function initFilters(map){
                     markerCluster.repaint();
                     centerMapOnMarkers(map);
 
-                    if(count_result==0) notify('<p class="c-error">Aucun rendez-vous ne correspond.</p>');
+                    if(count_result==0) notify('<p class="c-error">Aucun résultat ne correspond.</p>');
                 }
             }
 
@@ -424,7 +433,7 @@ function initFilters(map){
             resetMarkers();
             markerCluster.repaint();
             centerMapOnMarkers(map);
-            jQuery('#cat option, #dates_rdv option').prop('selected', function() {
+            jQuery('#cat option, #filiere option').prop('selected', function() {
                 return this.defaultSelected;
             });
             is_filtered = false;

@@ -20,17 +20,9 @@ echo '<article>';
 
 				get_template_part( 'page-templates-parts/content', 'formation' );
 
-			elseif ( is_singular('webinaire') ) :
-
-				get_template_part( 'page-templates-parts/content', 'webinaire' );
-
 			elseif ( is_singular('partage_document') ) :
 
 				get_template_part( 'page-templates-parts/content', 'document' );
-
-			elseif ( is_singular('question') ) :
-
-				get_template_part( 'page-templates-parts/content', 'question' );
 
 			endif;
 
