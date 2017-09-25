@@ -48,9 +48,16 @@ If only one value, will be used for the two properties
 Use 'null' to not declare a propertie, ex: flex(center null)
 */
 
-@mixin flex($positions: null null, $column: false, $wrap: true) {
+@mixin flex($positions: null null, $direction: false, $wrap: false) {
 	display: flex;
-	flex-wrap: wrap;
+
+	@if ( $direction ) {
+		flex-direction: $direction;
+	}
+
+	@if ( $wrap ) {
+		flex-wrap: $wrap;
+	}
 	
 	$positions: unpack-duo($positions);
 
@@ -63,14 +70,6 @@ Use 'null' to not declare a propertie, ex: flex(center null)
 		@if ($position != null) {
 			#{$flex-position}: $position;
 		}
-	}
-
-	@if ($column != false) {
-		flex-direction: column;
-	}
-
-	@if ($wrap != true) {
-		flex-wrap: nowrap;
 	}
 }
 
@@ -139,7 +138,7 @@ $fullH fill width AND height
 	}
 }
 
-// ROUNBD
+// ROUND
 
 @mixin round($width: null) {
 	@if ($width) {

@@ -1,0 +1,43 @@
+$jump: $space--xl 0;
+
+.content {
+	h2 {
+		font-family: $font-h;
+		padding-right: 1em;
+	}
+
+	h3 {
+		font-family: $font-h;
+		font-weight: 400;
+	}
+
+	blockquote {
+
+	}
+
+	figure {
+		margin: 0;
+
+		img {
+			border-radius: $radius;
+		}
+
+		figcaption {
+			text-align: center;
+			@extend .h5;
+			margin-top: 0.5em;
+			color: $c-txt;
+			padding: 0 5em;
+		}
+	}
+}
+
+.content-jump {
+	display: block;
+	margin-top: $space--xl;
+	margin-bottom: $space--xl;
+
+	+ .content-jump {
+		margin-top: -$space--m; 	
+	}
+}

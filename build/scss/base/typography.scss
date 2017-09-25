@@ -8,26 +8,68 @@
 
 
 body {
-	font: $font-base-size $font-txt;
-	line-height: $font-base-lh;
+	font-family: $font-txt;
+	line-height: 1.2;
 	color: $c-txt;
 	@include font-smoothing();
-}
-
-*::selection {
-	color: #fff;
-	background: blue;
 }
 
 
 //================================================================= WEBFONT
 
-//@include webfont('name', 'folder/subfolder', 'file_name', 400);
+@include webfont('avantgarde', 'avantgarde/bold', 'avantgarde-bold-webfont', 700);
+@include webfont('avantgarde', 'avantgarde/regular', 'avantgarde-regular-webfont', 400);
 
 
-//================================================================ HEADINGS
+//============================================================== FONT SIZES
 
-h1, h2, h3, h4, h5, p {
+$h0-font-sizes: (
+	null : (22px),
+	medium : (32px),
+	large : (45px)
+);
+
+$h1-font-sizes: (
+	null : (29px),
+	medium : (34px),
+	large : (40px)
+);
+
+$h2-font-sizes: (
+	null : (25px),
+	medium : (29px),
+	large : (34px)
+);
+
+$h3-font-sizes: (
+	null : (20px),
+	medium : (23px),
+	large : (25px)
+);
+
+$h4-font-sizes: (
+	null : (16px),
+	medium : (18px),
+	large : (20px, 1.5)
+);
+
+$h5-font-sizes: (
+	null : (14px),
+	medium : (15px),
+	large : (16px)
+);
+
+$h6-font-sizes: (
+	null : (12px),
+	medium : (13px),
+	large : (14px)
+);
+
+
+//========================================================== BASE STYLES
+
+
+h1, h2, h3, h4, h5, h6, p {
 	margin: 0;
 
 	&:first-child {
@@ -35,12 +77,16 @@ h1, h2, h3, h4, h5, p {
 	}
 }
 
+.h0 {	
+	@include font-size($h0-font-sizes);	
+}
+
 
 h1, .h1 {	
 	@include font-size($h1-font-sizes);	
 }
 h1 {	
-	margin-top: $space--xl;
+	margin-top: 2em;
 }
 
 
@@ -48,7 +94,7 @@ h2, .h2 {
 	@include font-size($h2-font-sizes);	
 }
 h2 {	
-	margin-top: $space--l*$bigger;
+	margin-top: 2.2em;
 }
 
 
@@ -56,7 +102,7 @@ h3, .h3 {
 	@include font-size($h3-font-sizes);	
 }
 h3 {	
-	margin-top: $space--m;
+	margin-top: 1.7em;
 }
 
 
@@ -64,7 +110,7 @@ h4, .h4 {
 	@include font-size($h4-font-sizes);	
 }
 h4 {	
-	margin-top: $space--s;
+	margin-top: 1em;
 }
 
 
@@ -72,48 +118,46 @@ h5, .h5 {
 	@include font-size($h5-font-sizes);	
 }
 h5 {	
-	margin-top: $space--xs;
+	margin-top: 0.8em;
 }
 
 h6, .h6 {	
 	@include font-size($h6-font-sizes);	
 }
 h6 {	
-	margin-top: $space--xs*$smaller;
+	margin-top: 0.7;
 }
 
-
-//================================================================== CONTENT
 
 p, .p {
 	@include font-size($h4-font-sizes);	
 	font-family: $font-txt
 }
 p {
-	margin-top: $space--s;
+	margin-top: 1em;
 }
 
 
-a,
-p a {
+ul {
+	margin-top: 1em;
 
+	li {
+		@extend .p;
+		margin-top: 0.4em;
+		line-height: 1.1;
+	}
+}
+
+p a,
+li a {
+	color: $c-main;
+	font-weight: 900;
+	text-decoration: underline;
+
+	&:hover {
+		color: $c-dark;
+	}
 }
 
 
-blockquote {
-
-}
-
-
-ul, ol {
-	
-}
-
-
-//============================================================= COMPONENTS
-
-
-
-//============================================================= ICON FONT
-
-
+//============================================================ COMPOSANTS

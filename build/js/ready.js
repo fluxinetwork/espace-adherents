@@ -12,27 +12,9 @@ var FOO = {
             jQuery('.fitvid').fitVids();            
         }
     },
-    page_has_filters: {
-        init: function(){
-            initFluxiFilterPosts();
-            initLoadMore();            
-        }
-    },
     home: {
         init: function() {
             isHome = true;
-        }
-    },
-    js_contact_form: {
-        init: function() {
-            initFormContact();
-        }
-    },
-    page_template_page_thematique: {
-        init: function() {
-            init_tabs();
-            active_current_cat();
-            img_titre();
         }
     }
     

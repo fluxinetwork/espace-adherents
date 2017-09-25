@@ -3,22 +3,23 @@
 @import "utils/easing";
 @import "utils/functions";
 @import "utils/mixins";
-@import "utils/animations";
 @import "utils/variables";
-@import "utils/helpers";
 
 
 // BASE
 
 @import "base/reset";
-@import "base/typography";
 @import "base/layers";
+@import "base/helpers";
+@import "base/typography";
+@import "base/animations";
+@import "base/misc";
 
 
-// LAYOUT
+// LAYOUTS
 
-@import "layout/base/l-basics";
-@import "layout/base/l-flexGrid";
+@import "layouts/base/l-basics";
+@import "layouts/base/l-flexGrid";
 
 
 // COMPONENTS
@@ -27,15 +28,15 @@
 @import "components/base/cb-loader";
 @import "components/base/cb-notify";
 @import "components/base/cb-adminTools";
-@import "components/c-buttons";
-@import "components/c-map";
 
 
-// CHUNK
+// BLOCKS
+
+@import "blocks/header";
+@import "blocks/content";
+@import "blocks/footer";
 
 
 // PAGES 
 
 @import "pages/homepage";
-@import "pages/single";
-@import "pages/page";

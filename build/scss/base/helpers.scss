@@ -1,0 +1,333 @@
+/*======================================================================*\
+==========================================================================
+
+								HELPERS
+
+==========================================================================
+\*======================================================================*/
+
+%transition,
+.transition {
+  	@include transition();
+}
+
+
+//================================================================== RESET
+
+%list-reset,
+.list-reset {
+	@include list-reset();
+}
+
+.clearfix {
+   *zoom: 1;
+
+   &:before,
+   &:after {
+       content: " ";
+       display: table;
+   }
+
+   &:after {
+       clear: both;
+   }
+}
+
+//================================================================ POSITIONS
+
+.posR {
+	position: relative;
+}
+
+.posA {
+	position: absolute;
+}
+
+.posF {
+	position: fixed;
+}
+
+//================================================================== DISPLAY
+
+.displayIB {
+	display: inline-block;
+}
+
+
+//==================================================== AFFICHAGE BREAKPOINTS
+
+[class*="show@"] {
+	display: none;
+}
+
+.show\@small {
+	@media screen and(min-width: $break--s) {
+		display: block;
+	}
+}
+
+.show\@medium {
+	@media screen and(min-width: $break--m) {
+		display: block;
+	}
+}
+
+.show\@large {
+	@media screen and(min-width: $break--l) {
+		display: block;
+	}
+}
+
+.show\@xlarge {
+	@media screen and(min-width: $break--xl) {
+		display: block;
+	}
+}
+
+
+//=================================================================== TYPO
+
+.t-deco--none {
+	text-decoration: none !important;
+}
+
+.t--h {
+	font-family: $font-h !important;
+}
+.t--bt {
+	font-family: $font-bt !important;
+}
+.t--p {
+	font-family: $font-txt !important;
+}
+
+.t--uppercase {
+	text-transform: uppercase !important;
+}
+.t--lowercase {
+	text-transform: lowercase !important;
+}
+
+.t-align--l {
+	text-align: left !important;
+}
+.t-align--r {
+	text-align: right !important;
+}
+.t-align--c {
+	text-align: center !important;
+}
+
+.t-fw--400 {
+	font-weight: 400 !important;
+}
+.t-fw--700 {
+	font-weight: 700 !important;
+}
+.t-fw--900 {
+	font-weight: 900 !important;
+}
+
+
+//================================================================== FLEX
+
+.flex {
+	display: flex !important;
+
+	&--column {
+		flex-direction: column !important;
+	}
+
+	&--wrap {
+		flex-wrap: wrap !important;
+	}
+
+	&--jcc {
+		justify-content: center !important;
+	}
+
+	&--jcsb {
+		justify-content: space-between !important;
+	}
+
+	&--jcfs {
+		justify-content: flex-start !important;
+	}
+
+	&--jcfe {
+		justify-content: flex-end !important;
+	}
+	
+	&--jcspa {
+		justify-content: space-around !important;
+	}
+
+	&--aifs {
+		align-items: flex-start !important;
+	}
+
+	&--aic {
+		align-items: center !important;
+	}
+
+	&--aife {
+		align-items: flex-end !important;
+	}
+
+	&--center {
+		align-items: center !important;
+		justify-content: center !important;
+	}
+
+	&--none {
+		flex: none !important;
+	}
+
+	&--auto {
+		flex: 1 0 auto !important;
+	}
+
+	&--100 {
+		flex: 1 0 100% !important;
+	}
+
+	&--1 {
+		flex: 1 !important;
+	}
+
+	&--2 {
+		flex: 2 !important;
+	}
+
+	&--3 {
+		flex: 3 !important;
+	}
+}
+
+
+//================================================================= STATES
+
+.is-hidden {
+	visibility: hidden;
+	opacity: 0;
+} 
+
+.is-visible {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.is-none {
+	display: none !important;
+}
+
+.is-muted {
+	opacity: 0.3 !important;
+}
+
+.is-on-top {
+	z-index: 10 !important;
+}
+
+.is-fixed {
+	position: fixed !important;
+}
+
+.has-pointer {
+  cursor: pointer; 
+}
+
+.has-no-scroll {
+	overflow: hidden;
+}
+
+
+//================================================================= COLORS
+
+@mixin colors($color, $suffix) {
+	.c-#{$suffix} {
+		color: $color !important;
+	}
+	.bg-#{$suffix} {
+		background-color: $color !important;
+	}
+}
+
+@include colors($c-main, 'main');
+@include colors($c-accent, 'accent');
+@include colors($c-dark, 'dark');
+@include colors($c-light, 'light');
+@include colors($c-txt, 'txt');
+@include colors($c-valid, 'valid');
+@include colors($c-error, 'error');
+@include colors($c-facebook, 'facebook');
+@include colors($c-twitter, 'twitter');
+@include colors($c-linkedin, 'linkedin');
+@include colors($c-youtube, 'youtube');
+@include colors(#fff, 'white');
+
+
+//======================================================= PADDING & MARGIN
+
+.mgn--center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.mgnTop--auto {
+	margin-top: auto !important;
+}
+
+.mgnRight--auto {
+	margin-right: auto !important;
+}
+
+.mgnBottom--auto {
+	margin-bottom: auto !important;
+}
+
+.mgnLeft--auto {
+	margin-left: auto !important;
+}
+
+@mixin spaces($space, $suffix) {
+	.pdg--#{$suffix} {
+		padding: $space !important;
+	}
+	.pdgTop--#{$suffix} {
+		padding-top: $space !important;
+	}
+	.pdgRight--#{$suffix} {
+		padding-right: $space !important;
+	}
+	.pdgBottom--#{$suffix} {
+		padding-bottom: $space !important;
+	}
+	.pdgLeft--#{$suffix} {
+		padding-left: $space !important;
+	}
+
+	.mgn--#{$suffix} {
+		margin: $space !important;
+	}
+	.mgnTop--#{$suffix} {
+		margin-top: $space !important;
+	}
+	.mgnRight--#{$suffix} {
+		margin-right: $space !important;
+	}
+	.mgnBottom--#{$suffix} {
+		margin-bottom: $space !important;
+	}
+	.mgnLeft--#{$suffix} {
+		margin-left: $space !important;
+	}
+}
+
+@include spaces(0, 'none');
+@include spaces($space--xs, 'xs');
+@include spaces($space--s, 's');
+@include spaces($space--m, 'm');
+@include spaces($space--l, 'l');
+@include spaces($space--xl, 'xl');
+@include spaces($space--xxl, 'xxl');

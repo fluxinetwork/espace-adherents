@@ -8,6 +8,7 @@
 
 .cb-notify {
 	position: fixed;
+	width: 100%;
 	z-index: 1000;
 	left: 0;
 	bottom: 0;
@@ -18,23 +19,32 @@
 	&.is-open {
 		transform: translateY(0%);
 	}
+
+	&.error {
+		background-color: $c-error;
+	}
+
+	&.valid {
+		background-color: $c-valid;
+	}
 }
 
 .cb-notify__content {
-	@extend .l-cell;
+	padding: $space--s;
 	@include flex(space-between center);
 }
 
 .cb-notify__message {
-	@extend .h3;
+	@extend .h4;
 	font-family: $font-h;
 	color: #fff;
+	margin-right: $space--m;
 }
 
 .cb-notify__btn {
+	flex: none;
 	cursor: pointer;
 	flex: none;
 	color: #fff;
-	font-family: $font-bt;
-	@extend .h4
+	font-family: $font-h;
 }

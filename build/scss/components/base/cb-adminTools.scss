@@ -9,73 +9,30 @@
 .cb-adminTools {
 	position: fixed;
 	z-index: 1000;
-	left: 0;
-	bottom: 0;
-	//width: 100%;
-	padding: $space--xs;
+	right: $space--xs;
+	bottom: $space--xs;
+	padding: $space--s;
 	background-color: #000;
+	border-radius: 100px;
 	@extend %transition;
 	@include flex(space--between center);
 
 	@media screen and (max-width: $break--m) {
 		display: none;
 	}
-
-	&.is-off {
-		transform: translateY(100%);
-	}
 }
 
-.cb-adminTools__area {
-	flex: 1 0 30%;
-
-	&:nth-child(2) {
-		text-align: center;
-	}
-
-	&:nth-child(3) {
-		text-align: right;
-	}
-}
-
-.cb-adminTools__area__bt {
+.cb-adminTools__bt {
 	position: relative;
-	//@extend .t-miniH;
+	font-family: $font-h;
+	text-transform: uppercase;
+	@extend .h4;
 	color: #fff;
-	padding: $space--xs  $space--s;
-
-	&::after {
-		content: '';
-		position: absolute;
-		height: 2px;
-		width: 0;
-		left: 0;
-		bottom: 0;
-		background-color: $c-main;
-		@extend %transition;
-	}
+	padding: 0.1em  0.6em;
 
 	&:hover {
-		color: $c-main;
+		color: $c-accent;
 
-		&::after {
-			width: 100%;
-		}
-	}
-
-	&--grid {
-
-		@media screen and (max-width: $break--xl) {
-			display: none;
-		}
-	}
-
-	&--admin {
-		margin-left: auto;
-	}
-
-	&--edit {
-		margin-right: auto;
 	}
 }
 

@@ -1,0 +1,181 @@
+/*======================================================================*\
+==========================================================================
+
+							LAYOUT BASICS
+
+==========================================================================
+\*======================================================================*/
+
+
+//==================================================================  CELL
+
+
+.l-basicCell {
+	padding: $space--s;
+	
+	@media screen and (min-width: $break--l) {
+		padding: $space--m;
+	}
+}
+
+@mixin largeCell() {
+	padding: $space--l;
+
+	@media screen and (min-width: $break--m) {
+		padding: $space--l*$bigger;
+	}
+
+	@media screen and (min-width: $break--l) {
+		padding: $space--xl;
+	}
+}
+
+.l-largeCell {
+	@include largeCell();
+}
+
+.l-heroCell {
+	padding: $space--xl*$bigger $space--xl;
+
+	@media screen and (min-width: $break--m) {
+		padding: $space--xl*$bigger*$bigger $space--xl*$bigger;
+	}
+
+	@media screen and (min-width: $break--l) {
+		padding: $space--xl*2*$bigger $space--xl*2;
+	}
+}
+
+
+//====================================================================  COL
+
+$break: $break--l;
+
+.l-col {
+	width: 100%;
+	max-width: $maxW;
+	padding-left: $gutter;
+	padding-right: $gutter;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: $bg-grid-tmp;
+
+	&--content {
+		max-width: $contentW;
+
+		@media screen and (min-width: $break--xl) {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+
+	&--narrow {
+		max-width: $contentW*$smaller;
+	}
+}
+
+
+//=========================================================  VERTICAL RYTHM
+
+
+.l-jump {
+	margin-top: $space--m;
+
+	@media screen and (min-width: $break--m) {
+		margin-top: $space--l;
+	}
+
+	@media screen and (min-width: $break--l) {
+		margin-top: $space--l*$bigger;
+	}
+}
+
+$rythm-s: $space--l;
+$rythm-m: $space--xl;
+$rythm-l: $space--xxl;
+$rythm-xl: $space--xxl*$bigger;
+
+.l-topMargin {
+	margin-top: $rythm-s;
+
+	@media screen and (min-width: $break--m) {
+		margin-top: $rythm-m;
+	}
+
+	@media screen and (min-width: $break--l) {
+		margin-top: $rythm-l;
+	}
+
+	@media screen and (min-width: $break--xl) {
+		margin-top: $rythm-xl;
+	}
+}
+
+.l-bottomMargin {
+	margin-bottom: $rythm-s;
+
+	@media screen and (min-width: $break--m) {
+		margin-bottom: $rythm-m;
+	}
+
+	@media screen and (min-width: $break--l) {
+		margin-bottom: $rythm-l;
+	}
+
+	@media screen and (min-width: $break--xl) {
+		margin-bottom: $rythm-xl;
+	}
+}
+
+.l-margin {
+	@extend .l-topMargin;
+	@extend .l-bottomMargin;
+}
+
+.l-topPadding {
+	padding-top: $rythm-s;
+
+	@media screen and (min-width: $break--m) {
+		padding-top: $rythm-m;
+	}
+
+	@media screen and (min-width: $break--l) {
+		padding-top: $rythm-l;
+	}
+
+	@media screen and (min-width: $break--xl) {
+		padding-top: $rythm-xl;
+	}
+}
+
+.l-bottomPadding {
+	padding-bottom: $rythm-s;
+
+	@media screen and (min-width: $break--m) {
+		padding-bottom: $rythm-m;
+	}
+
+	@media screen and (min-width: $break--l) {
+		padding-bottom: $rythm-l;
+	}
+
+	@media screen and (min-width: $break--xl) {
+		padding-bottom: $rythm-xl;
+	}
+}
+
+.l-padding {
+	@extend .l-topPadding;
+	@extend .l-bottomPadding;
+}
+
+
+//=============================================================  QUICK FLEX
+
+.l-center {
+	@include flex(center);
+
+	&--col {
+		flex-direction: column;
+	}
+}
