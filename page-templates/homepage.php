@@ -11,7 +11,13 @@ Template Name: Homepage
 			<?php the_title( '<h1>', '</h1>' ); ?>
 		</header>
 
-		<?php include( get_template_directory() . '/page-templates-parts/map-repertoire.php' ); ?>
+		<ul>
+			<li>derniers acteurs du répertoire</li>
+
+			<li>dernières formations</li>
+
+			<li>derniers documents</li>
+		</ul>
 
 	<?php else: ?>
 

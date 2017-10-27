@@ -381,5 +381,7 @@ function fluxi_post_exists( $id ) {
  * Quick var_dump() with <pre> tags
  */
 function vardump( $array ) {
-  echo '<pre>'.var_dump($array).'</pre>';
+  echo '<pre>';
+  var_dump($array);
+  echo '</pre>';
 }

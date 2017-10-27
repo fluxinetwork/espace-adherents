@@ -18,40 +18,44 @@
 
 
 <div class="ck-map">
+	
+	<?php if ( is_user_logged_in() ): ?>
 
-	<form id="form-filter-map" role="form"  class="ck-map-filters">
-	    <div class="ck-map-select">
-	    	<label for="cat">Thème</label>
-			<select class="c-form__select" name="cat" id="cat">
-				<option disabled selected value="">Où en êtes-vous ?</option>
-				<?php
-					if( !empty($categories) ):
-						foreach( $categories as $category ) :
-							echo '<option value="' . esc_html__( $category->slug ) . '">' . esc_html__( $category->name ) . ' (' . esc_html__( $category->count ) . ')</option>';
-						endforeach;
-					endif;
-				?>
-			</select>
-	    </div>
+		<form id="form-filter-map" role="form"  class="ck-map-filters">
+		    <div class="ck-map-select">
+		    	<label for="cat">Thème</label>
+				<select class="c-form__select" name="cat" id="cat">
+					<option disabled selected value="">Où en êtes-vous ?</option>
+					<?php
+						if( !empty($categories) ):
+							foreach( $categories as $category ) :
+								echo '<option value="' . esc_html__( $category->slug ) . '">' . esc_html__( $category->name ) . ' (' . esc_html__( $category->count ) . ')</option>';
+							endforeach;
+						endif;
+					?>
+				</select>
+		    </div>
 
-	    <div class="ck-map-select">
-	    	<label for="cat">Filière</label>
-			<select class="c-form__select" name="filiere" id="filiere">
-				<option disabled selected value="">Quelle filière ?</option>
-				<?php
-					if( !empty($filieres) ):
-						foreach( $filieres as $filiere ) :
-							echo '<option value="' . esc_html__( $filiere->slug ) . '">' . esc_html__( $filiere->name ) . ' (' . esc_html__( $filiere->count ) . ')</option>';
-						endforeach;
-					endif;
-				?>
-			</select>
-	    </div>
+		    <div class="ck-map-select">
+		    	<label for="cat">Filière</label>
+				<select class="c-form__select" name="filiere" id="filiere">
+					<option disabled selected value="">Quelle filière ?</option>
+					<?php
+						if( !empty($filieres) ):
+							foreach( $filieres as $filiere ) :
+								echo '<option value="' . esc_html__( $filiere->slug ) . '">' . esc_html__( $filiere->name ) . ' (' . esc_html__( $filiere->count ) . ')</option>';
+							endforeach;
+						endif;
+					?>
+				</select>
+		    </div>
 
-		<button type="reset" class="c-button c-button--ghost ck-map-reset js-reload is-none">Reset</button>
-		<button type="submit" id="submit-filters" class="c-button">Filtrer</button>
+			<button type="reset" class="c-button c-button--ghost ck-map-reset js-reload is-none">Reset</button>
+			<button type="submit" id="submit-filters" class="c-button">Filtrer</button>
 
-	</form>
+		</form>
+
+	<?php endif; ?>
 
 
 	<div class="cb-spinner map__holder__loader"></div>

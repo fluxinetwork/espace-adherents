@@ -4,6 +4,8 @@
 -------------------------------------------------------
    | redirect_guest_to_home();
    | get_json_map();
+   | get_filieres();
+   | get_post_cat();
 */
 
 
@@ -16,7 +18,7 @@
  */
 
 function redirect_guest_to_home() {
-	if ( !is_front_page() && !is_user_logged_in() ):
+	if ( !is_front_page() && !is_user_logged_in() ):		
 		wp_redirect( get_home_url(), 301 );
 		exit;
     endif;
@@ -175,3 +177,45 @@ function get_json_map(){
 
 add_action('wp_ajax_nopriv_get_json_map', 'get_json_map');
 add_action('wp_ajax_get_json_map', 'get_json_map');
+
+
+/**
+ * Get post taxo filiere
+ *
+ * @param   Post ID
+ *
+ * @return	String
+ */
+function get_filieres(){
+	$filieres = get_the_terms( get_the_ID(), 'filiere' );
+	if ( $filieres && ! is_wp_error( $filieres ) ) :
+	    $array_filieres = array();
+	    foreach ( $filieres as $filiere ) {
+	        $array_filieres[] = $filiere->name;
+	    }
+	    $all_filieres = join( ", ", $array_filieres );
+
+	    return $all_filieres;
+	endif;
+}
+
+/**
+ * Get post categories
+ *
+ * @param   N/A
+ *
+ * @return	String
+ */
+function get_post_cat(){
+	$categories = get_the_category();
+	if ( ! empty( $categories ) ) :
+		$array_categories = array();
+		foreach( $categories as $category ) {
+			$array_categories[] = $category->name;			
+		}
+		$all_cats = join( ", ", $array_categories );
+
+		return $all_cats;
+	endif;
+}
+

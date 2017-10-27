@@ -20,7 +20,7 @@ echo '<article>';
 
 				get_template_part( 'page-templates-parts/content', 'formation' );
 
-			elseif ( is_singular('partage_document') ) :
+			elseif ( is_singular('documents') ) :
 
 				get_template_part( 'page-templates-parts/content', 'document' );
 

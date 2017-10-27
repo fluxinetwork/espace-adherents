@@ -78,8 +78,8 @@ function enqueue_scripts() {
     wp_register_script( 'mousewheel', THEME_DIR_PATH . '/app/js/vendors/jquery.mousewheel.min.js', array(), null, true );
     wp_register_script( 'fitvids', THEME_DIR_PATH . '/app/js/vendors/base/jquery.fitvids.min.js', array(), null, true );
 
-    // Ajax on home
-    if( is_page_template( 'page-templates/homepage.php' ) ){
+    // Ajax on home logout and repertoire page
+    if( is_page_template( 'page-templates/repertoire.php' ) || is_page_template( 'page-templates/homepage.php' ) && !is_user_logged_in() ){
         // Main
         wp_register_script( 'main', THEME_DIR_PATH . '/app/js/main.js', array('modernizr', 'jquery', 'fitvids' ), null, true );
         //  Map
