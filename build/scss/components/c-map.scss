@@ -1,0 +1,277 @@
+/*======================================================================*\
+==========================================================================
+
+							CHUNK MAP
+
+==========================================================================
+\*======================================================================*/
+
+#map{
+	width:100%;
+	height:700px;
+
+	@media screen and (max-width: $break--m) {
+		height:500px;
+
+
+		.fullscreen & {
+			position: fixed !important;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+		}
+	}
+
+	@media screen and (min-width: $break--m) {
+		max-height: 80vh;	
+	}
+}
+
+.map__holder__loader {
+	display: none;
+}
+
+.map__holder__cards {
+	display: none;
+}
+
+
+//=================================================================================================== FILTERS
+
+
+.ck-map-filters {
+	position: relative;
+	@include flex(center null);
+	margin: 0 auto;
+
+	> * {
+		&:not(:last-child) {
+			margin-left: $space--s;
+		}
+	}
+
+	@media screen and (max-width: $break--m) {
+		display: none;
+	}
+}
+
+.ck-map-select {
+	label {
+		display: none;
+	}
+
+	select {
+		@extend .h4;
+		width: 240px;
+		border: 2px solid $c-main;
+		color: $c-main;
+		height: 100%;
+		@include font-smoothing(auto);
+	}
+}
+
+.ck-map-reset {
+	position: absolute;
+	right: 0;
+}
+
+.ck-map-container {
+	position: relative;
+	margin-top: $space--l;
+}
+
+.ck-map-container__active-fs {
+	@include flex(center);
+	@include fill('parent', true);
+	z-index: 20;
+	background-color: rgba($c-dark, 0.8);
+
+	.fullscreen & {
+		display: none;
+	}
+
+	@media screen and (min-width: $break--m) {
+		display: none;
+	}
+}
+
+.ck-map-container__exit {
+	position: fixed;
+	display: none;
+	z-index: 100;
+	right: $space--s;
+	top: $space--s;
+
+	.fullscreen & {
+		display: block;
+	}
+}
+
+.ck-map-container__geoloc {
+	position: absolute;
+	top: 0;
+	transform: translate(-50%, -50%);
+	display: none;
+
+	@media screen and (min-width: $break--l) {
+		left: 0;
+		display: block;
+	}
+}
+
+//=================================================================================================== INFOBULLE
+
+.gm-style-iw {
+	top: 20px !important;
+	left: 25px !important;
+	max-width: 350px !important;
+	overflow: visible !important;
+
+	> div,
+	> div > div {
+		overflow: visible !important;
+	}
+}
+
+.infowindow__content:hover .infowindow__content__header__title {
+	color: $c-dark;
+}
+
+.infowindow__content__header {
+	position: relative;
+	background-color: #fff;
+	box-shadow: 0 0 20px rgba(#000, 0.2);
+	border-radius: $radius;
+	padding: 20px;
+
+	@media screen and (min-width: $break--m) {
+		padding: 40px;
+	}
+}
+
+.infowindow__content__header__type,
+.infowindow__content__header__date,
+.infowindow__content__body__link {
+	position: relative;
+	padding-left: 40px;
+	color: $c-main;
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-color: $c-main;
+		left: 0;
+		width: 30px;
+		height: 7px;
+		top: 4px;
+		border-radius: 7px;
+	}
+}
+
+.infowindow__content__header__title,
+.infowindow__content__header__date {
+	color: $c-main;
+	margin-top: $space--xs;
+}
+
+.infowindow__content__header__title {
+	//@extend .t-intertitre;
+}
+
+
+.infowindow__content__body {
+	position: relative;
+	background-color: $c-main;
+	margin: 0 $space--s;
+	padding: 20px;
+
+	&::after {
+		content: '';
+		position: absolute;
+		bottom: -10px;
+		left: 50%;
+		margin-left: -7px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 7.5px 0 7.5px;
+		border-color: $c-main transparent transparent transparent;
+	}
+}
+
+.infowindow__content__body__text {
+	color: #fff;
+	line-height: 1.3;
+}
+
+.infowindow__content__body__link {
+	display: block;
+	color: #fff;
+	margin-top: $space--m;
+	font-family: $font-txt;
+	@extend .h4;
+	text-transform: uppercase;
+
+	&::before {
+		background-color: #fff;
+	}
+}
+
+.infowindow--bg{
+	display: none;
+}
+
+.infowindow__close {
+	height: auto !important;
+	width: auto !important;
+	opacity: 1 !important;
+	top:  0!important;
+	left: 10px !important;
+
+	.c-roundBt {
+		background-color: $c-dark;
+	}
+}
+
+//=================================================================================================== SELCT
+
+
+.ck-map__select {
+	@extend .list-reset;
+	@extend .l-flexGrid;
+
+	@media screen and (max-width: $break--m) {
+		align-items: center;
+	}
+
+	@media screen and (min-width: $break--m) {
+		justify-content: center;
+	}
+}
+
+.ck-map__select__item {
+	@extend .l-flexGrid__item;
+}
+
+//=================================================================================================== DECOR
+
+.ck-map__enfant {
+	margin-top: $space--l;
+	@include flex(center null);
+
+	@media screen and(max-width: $break--l) {
+		display: none;
+	}
+
+	.enfant {
+		width: 80px;
+		height: 130px;
+
+		@media screen and(min-width: $break--l) {
+			width: 170px;
+			height: 256px;
+		}
+	}
+}
