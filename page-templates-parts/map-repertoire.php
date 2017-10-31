@@ -25,7 +25,7 @@
 		    <div class="ck-map-select">
 		    	<label for="cat">Thème</label>
 				<select class="c-form__select" name="cat" id="cat">
-					<option disabled selected value="">Où en êtes-vous ?</option>
+					<option disabled selected value="">Quelle compétence ?</option>
 					<?php
 						if( !empty($categories) ):
 							foreach( $categories as $category ) :

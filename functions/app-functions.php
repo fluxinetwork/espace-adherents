@@ -23,7 +23,7 @@ function redirect_guest_to_home() {
 		exit;
     endif;
 }
-add_action( 'template_redirect', 'redirect_guest_to_home' );
+//add_action( 'template_redirect', 'redirect_guest_to_home' );
 
 
 /**

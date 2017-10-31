@@ -16,4 +16,6 @@
 		</ul>		
 	</nav>
 
+	<?php include( get_template_directory() . '/page-templates-parts/base/search-form.php' ); ?>
+
 </header>

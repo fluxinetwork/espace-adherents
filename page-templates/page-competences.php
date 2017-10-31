@@ -3,7 +3,8 @@
 Template Name: Répertoire de compétences
 */
 ?>
-<?php get_header(); ?>	
+<?php get_header(); ?>
+
 <?php 
 	if ( have_posts() ) : 
 		while ( have_posts() ) : the_post(); 
@@ -87,8 +88,8 @@ Template Name: Répertoire de compétences
 
   	get_template_part( 'page-templates-parts/content', 'none' );
 
-	endif; 
-?>	
+	endif;
+?>
 
 <?php get_footer(); ?>
 
