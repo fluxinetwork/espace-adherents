@@ -44,13 +44,21 @@ Template Name: Documents
 					while ( $query_cat_posts->have_posts() ) : $query_cat_posts->the_post();
 
 						// Item						
-						$template_content .= '<a href="'.get_the_permalink().'"><h3>'.get_the_title().'</h3></a>';
-						$template_content .= '<div><a class="link" href="'.get_field('fichier_document').'" target="_blank">Télécharger le document</a></div>';
+						$template_content .= '<a href="'.get_the_permalink().'">';
+							$template_content .= '<h3>'.get_the_title().'</h3>';
 
-						// Filieres : function in app-function.php
-						$template_content .= get_filieres();
+							if( get_field('fichier_document') ):
+								//$template_content .= '<div><a class="link" href="'.get_field('fichier_document').'" target="_blank">Télécharger le document</a></div>';
+								$template_content .= '<div>Document</div>';
+							else:
+								$template_content .= '<div>FAQ - Fiche méthodo</div>';
+							endif;
 
-						$template_content .= '<p>'.get_field('extrait_liste').'</p>';
+							// Filieres : function in app-function.php
+							$template_content .= get_filieres();
+
+							$template_content .= '<p>'.get_field('extrait_liste').'</p>';
+						$template_content .= '</a>';
 						$template_content .= '<br>';
 						
 						// End item

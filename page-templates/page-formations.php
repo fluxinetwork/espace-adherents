@@ -52,8 +52,9 @@ Template Name: Formations
 							$template_content .= get_filieres();
 
 							$template_content .= '<p>'.get_field('extrait_liste').'</p>';
-							$template_content .= '<br>';
 						$template_content .= '</a>';
+						$template_content .= '<br>';
+						
 						// End item
 
 					endwhile;

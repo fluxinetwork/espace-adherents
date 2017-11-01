@@ -5,17 +5,17 @@ Template Name: Répertoire de compétences
 ?>
 <?php get_header(); ?>
 
-<?php 
-	if ( have_posts() ) : 
-		while ( have_posts() ) : the_post(); 
+<?php
+	if ( have_posts() ) :
+		while ( have_posts() ) : the_post();
 
 			$anchors_menu = array();
-			$template_content = '';			
-			
+			$template_content = '';
+
 			// Get main cats
 			$catargs = array( 'orderby' => 'name', 'order' => 'ASC'	);
 			$categories = get_categories( $catargs );
-			foreach ($categories as $category) :				
+			foreach ($categories as $category) :
 
 				// Query item related to loop category
 				$args_cat_posts = array(
@@ -45,13 +45,14 @@ Template Name: Répertoire de compétences
 
 						// Item
 						$template_content .= '<a href="'.get_the_permalink().'">';
-						$template_content .= '<h3>'.get_the_title().' <small>- '.get_field('region').'</small></h3>';					
+							$template_content .= '<h3>'.get_the_title().'</h3>';
+							$template_content .= '<div>'.get_field('region').'</div>';
 
-						// Filieres : function in app-function.php
-						$template_content .= get_filieres();						
+							// Filieres : function in app-function.php
+							$template_content .= get_filieres();
 
-						// Extrait
-						$template_content .= '<p>'.get_field('extrait_liste').'</p>';
+							// Extrait
+							$template_content .= '<p>'.get_field('extrait_liste').'</p>';
 						$template_content .= '</a>';
 						$template_content .= '<br>';
 						// End item
@@ -67,20 +68,20 @@ Template Name: Répertoire de compétences
 
 			// Display
 			echo '<section>';
-				
+
 				echo get_the_content();
-				
-				echo '<header class="l-col"><h1>'.get_the_title().'</h1></header>';	
+
+				echo '<header class="l-col"><h1>'.get_the_title().'</h1></header>';
 
 				// Include MAP
-				include( get_template_directory() . '/page-templates-parts/map-repertoire.php' ); 				
+				include( get_template_directory() . '/page-templates-parts/map-repertoire.php' );
 
 				// Display list
 				echo '<div class="flex pdgTop--l">
 						<div style="width:80%">'.$template_content.'</div>
 						<div style="position:relative"><ul style="position:fixed">'.join( "", $anchors_menu ).'</ul></div>
 					 </div>';
-				
+
 			echo '</section>';
 		endwhile;
 
