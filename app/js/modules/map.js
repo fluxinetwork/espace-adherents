@@ -8,6 +8,7 @@
 
 
 var siteURL = 'http://espace-adherents:8888';
+//var siteURL = 'https://adherents.energie-partagee.org';
 var themeURL = siteURL+'/wp-content/themes/espace-adherents';
 
 var map = null;
