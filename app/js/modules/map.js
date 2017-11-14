@@ -57,7 +57,7 @@ jQuery( document ).ready(function(e) {
 
 
 /*
- * Init Adherents Map
+ * Init Repertoire Map
  * - Add a dom container
  * - latlng = new google.maps.LatLng(47.50,2.20);
  * - activateFilters : default = false
@@ -65,7 +65,10 @@ jQuery( document ).ready(function(e) {
  */
 function initMap(){
 
-    //console.log('Init Google Map Obj for "Adherents Map"');
+    jQuery('#form-filter-map #cat').prop('selectedIndex',0);
+    jQuery('#form-filter-map #filiere').prop('selectedIndex',0);
+
+    //console.log('Init Google Map Obj for "Repertoire Map"');
 
     stylesMap=[{featureType:"administrative",elementType:"all",stylers:[{visibility:"on"}]},{featureType:"administrative.country",elementType:"all",stylers:[{visibility:"on"}]},{featureType:"administrative.country",elementType:"labels",stylers:[{visibility:"off"}]},{featureType:"administrative.neighborhood",elementType:"all",stylers:[{visibility:"simplified"}]},{featureType:"administrative.land_parcel",elementType:"all",stylers:[{visibility:"simplified"}]},{featureType:"landscape.natural.terrain",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"poi",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"road",elementType:"all",stylers:[{visibility:"simplified"}]},{featureType:"road",elementType:"geometry",stylers:[{color:"#f7f7f7"}]},{featureType:"road",elementType:"labels.icon",stylers:[{visibility:"simplified"},{hue:"#0500ff"},{saturation:"-100"},{lightness:"45"}]},{featureType:"transit",elementType:"all",stylers:[{visibility:"off"}]},{featureType:"water",elementType:"all",stylers:[{hue:"#007bff"},{visibility:"on"},{lightness:"-9"}]}];
 
@@ -217,101 +220,83 @@ function addMakers(map, data){
 
     jQuery.each(data, function(i){
 
-        // If it's an adherent
+        // If it's an repertoire
         if(data[i].postType == 'repertoire'){
 
             // Slugs
             var tag = data[i].catSlug;
 
-            //  Add markers on the map only on desktop
-            //if(windowW >= bpSmall){
-                var newLatLng = {lat: Number(data[i].latitude), lng: Number(data[i].longitude)};
+            var newLatLng = {lat: Number(data[i].latitude), lng: Number(data[i].longitude)};
 
-                var marker = new google.maps.Marker({
-                    position: newLatLng,
-                    map: map,
-                    title: data[i].title,
-                    icon: iconsPin[tag],
-                    categorySlug : data[i].catSlug,
-                    filiereSlugs : data[i].filiereSlugs,
-                    desc : data[i].desc,
-                    permalink : data[i].permalink
-                });
+            var marker = new google.maps.Marker({
+                position: newLatLng,
+                map: map,
+                title: data[i].title,
+                icon: iconsPin[tag],
+                categorySlug : data[i].catSlug,
+                filiereSlugs : data[i].filiereSlugs,
+                desc : data[i].desc,
+                permalink : data[i].permalink
+            });
 
 
-                var infowindow = new google.maps.InfoWindow({
-                    content:'<div class="infowindow__content">'+
-                                '<div class="infowindow__content__header">'+
-                                    '<p class="infowindow__content__header__type">'+
-                                        data[i].catName+
-                                        '<br>'+
-                                        data[i].filiereNames+
-                                    '</p>'+
-                                    '<h3 class="infowindow__content__header__title">'+
-                                        data[i].title+                                        
-                                    '</h3>'+
-                                '</div>'+
-                                '<div class="infowindow__content__body">'+
-                                    '<p class="infowindow__content__body__text">'+
-                                    	data[i].desc+
-                                    '</p>'+
-                                    '<a href="'+data[i].permalink+'" class="infowindow__content__body__link">En savoir plus</a>'+
-                                '</div>'+
-                            '</div>'
-                });
+            var infowindow = new google.maps.InfoWindow({
+                content:'<div class="infowindow__content">'+
+                            '<div class="infowindow__content__header">'+
+                                '<p class="infowindow__content__header__type">'+
+                                    data[i].catName+
+                                    '<br>'+
+                                    data[i].filiereNames+
+                                '</p>'+
+                                '<h3 class="infowindow__content__header__title">'+
+                                    data[i].title+
+                                '</h3>'+
+                            '</div>'+
+                            '<div class="infowindow__content__body">'+
+                                '<p class="infowindow__content__body__text">'+
+                                	data[i].desc+
+                                '</p>'+
+                                '<a href="'+data[i].permalink+'" class="infowindow__content__body__link">En savoir plus</a>'+
+                            '</div>'+
+                        '</div>'
+            });
 
-                marker.addListener('click', function(e) {
-                    onClickMarker(i,map,marker,tag,e,infowindow);
-                });
+            marker.addListener('click', function(e) {
+                onClickMarker(i,map,marker,tag,e,infowindow);
+            });
 
-                // Add class to info window
-                google.maps.event.addListener(infowindow, 'domready', function() {
+            // Add class to info window
+            google.maps.event.addListener(infowindow, 'domready', function() {
 
-                    $infoBg = jQuery('.gm-style-iw').prev();
+                $infoBg = jQuery('.gm-style-iw').prev();
 
-                    $infoBg.addClass('infowindow--bg');
-                    jQuery('.gm-style-iw').next().addClass('infowindow__close').empty().append('<div class="c-roundBt c-roundBt--dark"><i class="fa fa-times"></i></div>');
+                $infoBg.addClass('infowindow--bg');
+                jQuery('.gm-style-iw').next().addClass('infowindow__close').empty().append('<div class="c-roundBt c-roundBt--dark"><i class="fa fa-times"></i></div>');
 
-                    $infoBg.find('div:eq(0)').addClass('infowindow--bg--shadow__corne')
-                    $infoBg.find('div:eq(1)').addClass('infowindow--bg--shadow__bubble');
+                $infoBg.find('div:eq(0)').addClass('infowindow--bg--shadow__corne')
+                $infoBg.find('div:eq(1)').addClass('infowindow--bg--shadow__bubble');
 
-                    $infoBg.find('div:eq(2)').addClass('infowindow--bg--corne');
-                    $infoBg.find('div:eq(2) div:eq(0)').addClass('infowindow--bg--corne__l');
-                    $infoBg.find('div:eq(2) div:eq(0)').next().addClass('infowindow--bg--corne__r');
+                $infoBg.find('div:eq(2)').addClass('infowindow--bg--corne');
+                $infoBg.find('div:eq(2) div:eq(0)').addClass('infowindow--bg--corne__l');
+                $infoBg.find('div:eq(2) div:eq(0)').next().addClass('infowindow--bg--corne__r');
 
-                    $infoBg.find('div:eq(2)').next().addClass('infowindow--bg--bubble');
-                });
+                $infoBg.find('div:eq(2)').next().addClass('infowindow--bg--bubble');
+            });
 
-                gmarkers.push(marker);
+            gmarkers.push(marker);
 
-                if(i==nbMakers-1 && activateFilters){
-                    // Init all filters once if activateFilters = true
-                    initFilters(map);
-                    activateFilters=false;
+            if(i==nbMakers-1 && activateFilters){
+                // Init all filters once if activateFilters = true
+                initFilters();
+                activateFilters=false;
 
-                    markerCluster = new MarkerClusterer(map, gmarkers, {imagePath: themeURL+'/app/img/map/m'});
-                    markerCluster.setIgnoreHidden(true);
-                    markerCluster.setMaxZoom(10);
+                markerCluster = new MarkerClusterer(map, gmarkers, {imagePath: themeURL+'/app/img/map/m'});
+                markerCluster.setIgnoreHidden(true);
+                markerCluster.setMaxZoom(10);
 
-                    centerMapOnMarkers(map);
+                centerMapOnMarkers(map);
 
-                }
-            //}
-            // Add info card
-            /*var markerContent = '<div class="card-map c-'+tag+' hide">';
-                    markerContent += '<a href="'+data[i].permalink+'">';
-                        markerContent += data[i].title;
-                    markerContent += '</a>';
-
-                    markerContent += '<div class="details">';
-                       markerContent += 'Des détails..........';
-                    markerContent += '</div>';
-
-                    markerContent += '<a class="button" href="'+data[i].permalink+'">Voir la fiche</a>';
-
-                markerContent += '</div>';
-
-            jQuery('.map-cards').append(markerContent);*/
+            }
 
         }
 
@@ -342,105 +327,102 @@ function onClickMarker(index,map,marker,tag,e,infowindow){
     // center on marker
     map.setCenter( e.latLng );
 
-    // Get the card
-    /*if(index != prevCardMapId){
-        if(isOpenMarker){
-            jQuery('.map-cards .card-map:eq('+prevCardMapId+')').toggleClass('hide');
-            setTimeout(function() {
-                jQuery('.map-cards .card-map:eq('+index+')').toggleClass('hide');
-
-            }, 220);
-
-        }else{
-            jQuery('.map-cards .card-map:eq('+index+')').toggleClass('hide');
-
-        }
-    }
-    prevCardMapId = index;*/
     isOpenMarker = true;
+}
+
+
+/**
+* Active trigger change filters
+*
+*/
+
+function initFilters(){
+
+    jQuery('#form-filter-map #cat').change(function(e){
+        e.preventDefault();
+        is_filtered = true;
+        console.log(jQuery(this).val());
+        filterCat = jQuery(this).val();
+        filterPostsOnChange ();
+    });
+
+    jQuery('#form-filter-map #filiere').change(function(e){
+        e.preventDefault();
+        is_filtered = true;
+        console.log(jQuery(this).val());
+        filterCat2 = jQuery(this).val();
+        filterPostsOnChange ();
+    });
 
 }
 
-function initFilters(map){
 
-    //console.log('Init filters');
-    jQuery('#form-filter-map').on('submit', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        var count_result = 0;
+/**
+*   Filter core
+*
+*/
 
-        if( jQuery('#cat').val() || jQuery('#filiere').val() ){
-            is_filtered = true;
-            resetMarkers();
-            var $form = jQuery('#form-filter-map');
+function filterPostsOnChange () {
 
-            if( jQuery('#cat').val() ){
-	            filterCat = jQuery('#cat').val();
-	        }
+    var count_result = 0;
+    resetMarkers();
+    jQuery('#form-filter-map').find('.js-reload').removeClass('is-none');
 
-            if( jQuery('#filiere').val() ){
-                filterCat2 = jQuery('#filiere').val();
+    for (i = 0; i < nbMakers; i++) {
+
+        // If is same category or category not picked
+        if ( gmarkers[i].categorySlug == filterCat || filterCat.length === 0 || filterCat == 'all_cat' ){
+
+            var current_filieres = gmarkers[i].filiereSlugs;
+            var arrayFilieres = current_filieres.split(', ');
+
+            if( jQuery.inArray(filterCat2,arrayFilieres) != -1 || filterCat2.length === 0 || filterCat2 == 'all_cat' ){
+                gmarkers[i].setVisible(true);
+                count_result++;
+            }else{               
+                gmarkers[i].setVisible(false);
             }
-
-            jQuery('#form-filter-map').find('.js-reload').removeClass('is-none');
-
-            for (i = 0; i < nbMakers; i++) {
-
-                // If is same category or category not picked
-                if ( gmarkers[i].categorySlug == filterCat || filterCat.length === 0 || filterCat == 'all_cat' ){
-
-                    var current_filieres = gmarkers[i].filiereSlugs;
-                    var arrayFilieres = current_filieres.split(', ');                  
-
-                    if( jQuery.inArray(filterCat2,arrayFilieres) != -1 || filterCat2.length === 0 || filterCat2 == 'all_cat' ){
-
-    	                gmarkers[i].setVisible(true);
-    	                count_result++;
-
-                    }
-
-                }
-                else{ // Categories don't match
-                    gmarkers[i].setVisible(false);
-                }
-
-                // If end loop
-                if( i==nbMakers-1 ){
-                    markerCluster.repaint();
-                    centerMapOnMarkers(map);
-
-                    if(count_result==0) notify('<p class="c-error">Aucun résultat ne correspond.</p>');
-                }
-            }
-
-
-        }else{
-        	notify('<p class="c-error">Aucun filtre n\'est sélectionné</p>');
+        }
+        else{ // Categories don't match
+            gmarkers[i].setVisible(false);
         }
 
-
-    });
-
-
-    // reset
-    jQuery('button[type="reset"]').on('click', function(e){
-        e.preventDefault();
-        e.stopPropagation();
-        resetMarkers();
-        if(is_filtered){
-            jQuery('#form-filter-map').find('.js-reload').addClass('is-none');
-            resetFilters();
-            resetMarkers();
+        // If end loop
+        if( i==nbMakers-1 ){
             markerCluster.repaint();
             centerMapOnMarkers(map);
-            jQuery('#cat option, #filiere option').prop('selected', function() {
-                return this.defaultSelected;
-            });
-            is_filtered = false;
-        }
-    });
 
+            if(count_result==0){
+                notify('Aucun résultat ne correspond.', 'error');
+            }else{
+                notify(count_result+' résultats', 'valid');
+            }
+        }
+    }
 }
+
+/**
+* Reset
+*
+*/
+
+jQuery('button[type="reset"]').on('click', function(e){
+    e.preventDefault();    
+    resetMarkers();
+    if(is_filtered){
+        jQuery('#form-filter-map').find('.js-reload').addClass('is-none');
+        resetFilters();
+        resetMarkers();
+        markerCluster.repaint();
+        centerMapOnMarkers(map);
+        jQuery('#cat option, #filiere option').prop('selected', function() {
+            return this.defaultSelected;
+        });
+        is_filtered = false;
+    }
+});
+
+
 /**
 * Geolocation
 *
@@ -490,7 +472,7 @@ function resetFilters(){
         //}
         if(i == gmarkers.length-1){
             filterCat = 'all_cat';
-            //filterDate = 'all_cat';
+            filterCat2 == 'all_cat';
         }
     }
 }
@@ -503,10 +485,7 @@ function resetMarkers() {
 
         // close infowindow
         if (isOpenMarker) { currentInfowindow.close();}
-        isOpenMarker = false;
-        // reset card
-        //jQuery('.map-cards .card-map:eq('+prevCardMapId+')').toggleClass('hide');
-        //prevCardMapId = null;
+        isOpenMarker = false;        
     }
 }
 

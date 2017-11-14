@@ -29,7 +29,8 @@
 					<?php
 						if( !empty($categories) ):
 							foreach( $categories as $category ) :
-								echo '<option value="' . esc_html__( $category->slug ) . '">' . esc_html__( $category->name ) . ' (' . esc_html__( $category->count ) . ')</option>';
+								if( $category->slug != 'non-classe' )
+								echo '<option value="' . esc_html__( $category->slug ) . '">' . esc_html__( $category->name ) . '</option>';
 							endforeach;
 						endif;
 					?>
@@ -37,13 +38,14 @@
 		    </div>
 
 		    <div class="ck-map-select">
-		    	<label for="cat">Filière</label>
+		    	<label for="filiere">Filière</label>
 				<select class="c-form__select" name="filiere" id="filiere">
 					<option disabled selected value="">Quelle filière ?</option>
 					<?php
 						if( !empty($filieres) ):
 							foreach( $filieres as $filiere ) :
-								echo '<option value="' . esc_html__( $filiere->slug ) . '">' . esc_html__( $filiere->name ) . ' (' . esc_html__( $filiere->count ) . ')</option>';
+								if( $category->slug != 'non-classe' )
+								echo '<option value="' . esc_html__( $filiere->slug ) . '">' . esc_html__( $filiere->name ) . '</option>';
 							endforeach;
 						endif;
 					?>
@@ -51,7 +53,7 @@
 		    </div>
 
 			<button type="reset" class="c-button c-button--ghost ck-map-reset js-reload is-none">Reset</button>
-			<button type="submit" id="submit-filters" class="c-button">Filtrer</button>
+			<!--<button type="submit" id="submit-filters" class="c-button">Filtrer</button>-->
 
 		</form>
 
