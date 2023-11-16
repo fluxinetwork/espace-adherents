@@ -1,0 +1,3244 @@
+[
+    {
+        "key": "group_5a5c8d5239c17",
+        "title": "Options",
+        "fields": [
+            {
+                "key": "field_5a5c8d56dc3a8",
+                "label": "Texte intro page d'accueil",
+                "name": "texte_intro_page_daccueil",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": "br"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "options_page",
+                    "operator": "==",
+                    "value": "options-generales"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_5a27e560525a4",
+        "title": "Suggestions",
+        "fields": [
+            {
+                "key": "field_5ab3a49cb6059",
+                "label": "Suggestions internes",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5a27e56689788",
+                "label": "Sélection",
+                "name": "selection_suggestions",
+                "aria-label": "",
+                "type": "relationship",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "post_type": [
+                    "documents",
+                    "formation",
+                    "repertoire"
+                ],
+                "taxonomy": [],
+                "filters": [
+                    "search",
+                    "post_type",
+                    "taxonomy"
+                ],
+                "elements": "",
+                "min": "",
+                "max": 6,
+                "return_format": "object",
+                "bidirectional_target": []
+            },
+            {
+                "key": "field_5ab3a2feb8680",
+                "label": "Suggestions libre",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5ab3a30fb8681",
+                "label": "Suggestions libre",
+                "name": "suggestions_libre",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Ajouter une suggestion libre",
+                "sub_fields": [
+                    {
+                        "key": "field_5ab3a3fab8682",
+                        "label": "Titre de la suggestion",
+                        "name": "titre_suggestion",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_5ab3a30fb8681"
+                    },
+                    {
+                        "key": "field_5ab3a40ab8683",
+                        "label": "Texte",
+                        "name": "texte",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": "",
+                        "parent_repeater": "field_5ab3a30fb8681"
+                    },
+                    {
+                        "key": "field_5ab3a42cb8684",
+                        "label": "Url de la suggestion",
+                        "name": "url_suggestion",
+                        "aria-label": "",
+                        "type": "url",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "parent_repeater": "field_5ab3a30fb8681"
+                    }
+                ],
+                "rows_per_page": 20
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "documents"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "formation"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_5c4704e766617",
+        "title": "Textes d'introduction des pages de catégories",
+        "fields": [
+            {
+                "key": "field_5c4705f2cc1ef",
+                "label": "Textes d'introduction",
+                "name": "textes_dintroduction",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "Cliquer sur le bouton ci-dessous pour jouter un texte d'introduction.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Ajouter un texte d'introduction",
+                "sub_fields": [
+                    {
+                        "key": "field_5c470527e0429",
+                        "label": "Catégorie",
+                        "name": "categorie",
+                        "aria-label": "",
+                        "type": "taxonomy",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "taxonomy": "category",
+                        "field_type": "select",
+                        "allow_null": 0,
+                        "add_term": 0,
+                        "save_terms": 0,
+                        "load_terms": 0,
+                        "return_format": "object",
+                        "multiple": 0,
+                        "bidirectional_target": [],
+                        "parent_repeater": "field_5c4705f2cc1ef"
+                    },
+                    {
+                        "key": "field_5c470588e042a",
+                        "label": "Texte d'introduction",
+                        "name": "texte_introduction",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 5,
+                        "new_lines": "br",
+                        "parent_repeater": "field_5c4705f2cc1ef"
+                    }
+                ],
+                "rows_per_page": 20
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "page-templates\/page-documents.php"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_5c81260863ae4",
+        "title": "Accueil",
+        "fields": [
+            {
+                "key": "field_5c8128fc3d874",
+                "label": "Introduction",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5c813a281bf12",
+                "label": "Menu",
+                "name": "menu",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 0,
+                "layout": "table",
+                "button_label": "Ajouter un élément",
+                "sub_fields": [
+                    {
+                        "key": "field_5c813a4b1bf13",
+                        "label": "Texte du lien",
+                        "name": "texte_lien",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_5c813a281bf12"
+                    },
+                    {
+                        "key": "field_5c813a591bf14",
+                        "label": "Url du lien",
+                        "name": "url_lien",
+                        "aria-label": "",
+                        "type": "page_link",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "post_type": [
+                            "page"
+                        ],
+                        "taxonomy": [],
+                        "allow_null": 0,
+                        "allow_archives": 0,
+                        "multiple": 0,
+                        "parent_repeater": "field_5c813a281bf12"
+                    },
+                    {
+                        "key": "field_5c813a841bf15",
+                        "label": "Icone",
+                        "name": "icone",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_5c813a281bf12"
+                    }
+                ],
+                "rows_per_page": 20
+            },
+            {
+                "key": "field_5c8126aab8589",
+                "label": "Texte d'introduction",
+                "name": "texte_intro",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "L’espace adhérents est alimenté par Énergie Partagée et les réseaux régionaux partenaires. Si vous souhaitez contribuer, commenter un article, partager un document ou ajouter votre structure au répertoire de compétences, n’hésitez pas à prendre contact avec votre réseau régional.",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": ""
+            },
+            {
+                "key": "field_5c8126e743d66",
+                "label": "Texte lien d'introduction",
+                "name": "texte_lien_intro",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Les réseaux régionnaux",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c81271a43d67",
+                "label": "Url lien d'introduction",
+                "name": "url_lien_intro",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c81274443d68",
+                "label": "Lien d'introduction externe",
+                "name": "lien_intro_externe",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "Cocher oui pour ouvrir le lien dans une nouvelle fenêtre.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5c8127933d872",
+                "label": "Vidéo",
+                "name": "video",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": ""
+            },
+            {
+                "key": "field_5c8128013d873",
+                "label": "Bloc de gauche",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5c8129133d875",
+                "label": "Titre",
+                "name": "titre_bloc_g",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Être adhérent Énergie Partagée c’est aussi :",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c81293c3d876",
+                "label": "Texte",
+                "name": "texte_bloc_g",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Accéder à des formations à prix réduits (100€), participer à la liste de diffusion des adhérents et consulter ses archives",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": ""
+            },
+            {
+                "key": "field_5c812a28c7271",
+                "label": "Texte lien",
+                "name": "texte_lien_bloc_g",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Renouveler votre adhésion",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c812a4dc7272",
+                "label": "Url du lien",
+                "name": "url_lien_bloc_g",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5c812fcb0edee",
+                "label": "Lien externe",
+                "name": "lien_bloc_g_externe",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 1,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_5c812a73a48dc",
+                "label": "Bloc de droite",
+                "name": "",
+                "aria-label": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
+            {
+                "key": "field_5c812a8ba48dd",
+                "label": "Titre",
+                "name": "titre_bloc_d",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Découvrez la carte des projets citoyens et des installations",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5c812a93a48de",
+                "label": "Texte",
+                "name": "texte_bloc_d",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Cette carte présente de manière exhaustive tous les projets citoyens en France suivis par un réseau régional, qu’ils soient financés ou non par Énergie Partagée.",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": ""
+            },
+            {
+                "key": "field_5c812acdc0c91",
+                "label": "Liens",
+                "name": "liens_bloc_d",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 1,
+                "max": 2,
+                "layout": "table",
+                "button_label": "Ajouter un élément",
+                "sub_fields": [
+                    {
+                        "key": "field_5c812af3c0c92",
+                        "label": "Texte lien",
+                        "name": "texte_lien",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_5c812acdc0c91"
+                    },
+                    {
+                        "key": "field_5c812afdc0c93",
+                        "label": "Url lien",
+                        "name": "url_lien",
+                        "aria-label": "",
+                        "type": "url",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "parent_repeater": "field_5c812acdc0c91"
+                    },
+                    {
+                        "key": "field_5c812b0cc0c94",
+                        "label": "Lien externe",
+                        "name": "lien_externe",
+                        "aria-label": "",
+                        "type": "true_false",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "message": "",
+                        "default_value": 0,
+                        "ui": 1,
+                        "ui_on_text": "",
+                        "ui_off_text": "",
+                        "parent_repeater": "field_5c812acdc0c91"
+                    }
+                ],
+                "rows_per_page": 20
+            },
+            {
+                "key": "field_5c812c5486518",
+                "label": "Texte sous les boutons",
+                "name": "texte_sous_boutons",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "Votre projet est déjà sur la carte ? Vous pourrez bientôt en actualiser les informations sans besoin de mot de passe !",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 3,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "page-templates\/homepage.php"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_599adc039ef45",
+        "title": "Aperçu de la page",
+        "fields": [
+            {
+                "key": "field_596e36c73488c",
+                "label": "Extrait",
+                "name": "extrait",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_599ad84c5fc72",
+                "label": "Image à la une",
+                "name": "main_image",
+                "aria-label": "",
+                "type": "image",
+                "instructions": "Sélectionnez une image HD de 750px de large minimum. Elle sera redimensionnée et optimisée après upload. Renommer votre image avec un titre ayant du sens (pas DC5135.jpg). Renseignez également la légende si besoin, le texte alternatif et la description. Ces informations sont nécessaires à un bon référencement et améliorent l'accessibilité du site.",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "return_format": "array",
+                "preview_size": "thumbnail",
+                "library": "all",
+                "min_width": "",
+                "min_height": "",
+                "min_size": "",
+                "max_width": "",
+                "max_height": "",
+                "max_size": "",
+                "mime_types": "jpg, jpeg, png, gif"
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "page"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_59dc8ecbd3df4",
+        "title": "Détails de la Formation",
+        "fields": [
+            {
+                "key": "field_59dc8ed08f581",
+                "label": "Lieu formation",
+                "name": "lieu_formation",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_59dc8ee38f582",
+                "label": "Date formation",
+                "name": "date_formation",
+                "aria-label": "",
+                "type": "date_picker",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "display_format": "d\/m\/Y",
+                "return_format": "d\/m\/Y",
+                "first_day": 1
+            },
+            {
+                "key": "field_59f0a8236fccb",
+                "label": "Extrait",
+                "name": "extrait_liste",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "formation"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_5a8d5e64dd985",
+        "title": "Gestion utilisateurs",
+        "fields": [
+            {
+                "key": "field_5aaba383b5975",
+                "label": "Structure",
+                "name": "structure",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5a8d5e6d7c912",
+                "label": "Contact utilisateur",
+                "name": "contact_utilisateur",
+                "aria-label": "",
+                "type": "user",
+                "instructions": "Veuillez sélectionner le responsable de cet utilisateur.",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "role": [
+                    "animateur",
+                    "sub-admin",
+                    "administrator"
+                ],
+                "allow_null": 0,
+                "multiple": 0,
+                "return_format": "array",
+                "bidirectional_target": []
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "user_form",
+                    "operator": "==",
+                    "value": "all"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_597756e09b556",
+        "title": "Répertoire des compétences",
+        "fields": [
+            {
+                "key": "field_595fab8e43188",
+                "label": "Adresse",
+                "name": "adresse",
+                "aria-label": "",
+                "type": "google_map",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "center_lat": 47,
+                "center_lng": "2.350388",
+                "zoom": 5,
+                "height": 300
+            },
+            {
+                "key": "field_599ab55905b79",
+                "label": "Complément d'adresse",
+                "name": "complement_dadresse",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_5977578e3eb28",
+                "label": "Type d'acteur",
+                "name": "type_acteur",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "acteur_sensibilisation": "Acteur de sensibilisation",
+                    "partenaire_prive": "Partenaire privé",
+                    "reseau_acteurs": "Réseau d’acteurs",
+                    "collectivite": "Collectivités",
+                    "societe_locale_production": "Société locale de production"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ad0d1679d2",
+                "label": "Statut",
+                "name": "statut_acteur",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "association": "Association",
+                    "sas": "SAS",
+                    "scic": "SCIC",
+                    "sem": "Société d'économie Mixte",
+                    "sca": "Société en commandite par Action",
+                    "collectivite": "Collectivités",
+                    "syndicat_mixte": "Syndicat Mixte",
+                    "sarl": "SARL"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_597758e56fa29",
+                "label": "Région",
+                "name": "region",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "FR-ARA": "Auvergne-Rhône-Alpes",
+                    "FR-BFC": "Bourgogne-Franche-Comté",
+                    "FR-BRE": "Bretagne",
+                    "FR-CVL": "Centre-Val de Loire",
+                    "FR-COR": "Corse",
+                    "FR-GES": "Grand Est",
+                    "FR-HDF": "Hauts-de-France",
+                    "FR-IDF": "Île-de-France",
+                    "FR-NOR": "Normandie",
+                    "FR-NAQ": "Nouvelle-Aquitaine",
+                    "FR-OCC": "Occitanie",
+                    "FR-PDL": "Pays de la Loire",
+                    "FR-PAC": "Provence-Alpes-Côte d'Azur"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ad7ae21bd8",
+                "label": "Adhérent",
+                "name": "adherent",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_597759a617c39",
+                "label": "Interlocuteur principal",
+                "name": "interlocuteur_principal",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_597759c017c3a",
+                "label": "Contact mail",
+                "name": "contact_mail_interlocuteur",
+                "aria-label": "",
+                "type": "email",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": ""
+            },
+            {
+                "key": "field_59775a0517c3b",
+                "label": "Contal téléphonique",
+                "name": "contal_telephonique_interlocuteur",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_599aceab8b143",
+                "label": "Site internet",
+                "name": "site_internet",
+                "aria-label": "",
+                "type": "url",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": ""
+            },
+            {
+                "key": "field_59775a8354c18",
+                "label": "Périmètre d'action",
+                "name": "perimetre_daction",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "local": "Local",
+                    "departemental": "Départemental",
+                    "regional": "Régional",
+                    "national": "National"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_59775b1ca040c",
+                "label": "Public cible",
+                "name": "public_cible",
+                "aria-label": "",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "collectivites_territoriales": "Collectivités territoriales",
+                    "acteurs_locaux": "Acteurs locaux (agriculteurs, collectifs d’habitants)",
+                    "entreprises": "Entreprises"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value",
+                "custom_choice_button_text": "Ajouter un nouveau choix"
+            },
+            {
+                "key": "field_59775bb0adfd3",
+                "label": "Étape d'intervention",
+                "name": "etape_dintervention",
+                "aria-label": "",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "emergence": "Emergence",
+                    "developpement": "Développement",
+                    "chantier": "Chantier",
+                    "exploitation": "Exploitation"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value",
+                "custom_choice_button_text": "Ajouter un nouveau choix"
+            },
+            {
+                "key": "field_59a7ba3952b4c",
+                "label": "Thématique d'intervention",
+                "name": "thematique",
+                "aria-label": "",
+                "type": "checkbox",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "ancrage_local": "Ancrage local",
+                    "technique": "Technique",
+                    "juridique": "Juridique",
+                    "financier": "Financier"
+                },
+                "allow_custom": 0,
+                "save_custom": 0,
+                "default_value": [],
+                "layout": "vertical",
+                "toggle": 0,
+                "return_format": "value",
+                "custom_choice_button_text": "Ajouter un nouveau choix"
+            },
+            {
+                "key": "field_599aa41002363",
+                "label": "",
+                "name": "",
+                "aria-label": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "ancrage_local"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "<h1>Ancrage local<\/h1>",
+                "new_lines": "",
+                "esc_html": 0
+            },
+            {
+                "key": "field_599aeeb02d133",
+                "label": "Expériences à partager",
+                "name": "exp_ancrage_local",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "ancrage_local"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "exp_part_1": "Interface avec les instances publiques et privées",
+                    "exp_part_2": "Concertation et médiation",
+                    "exp_part_3": "Coordination du groupe projet",
+                    "exp_part_4": "Mobilisation de l’épargne citoyenne",
+                    "exp_part_5": "Stratégie et actions de communication",
+                    "exp_part_6": "Sensibilisation à l’énergie citoyenne"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599aef12a973e",
+                "label": "Conseil et accompagnement",
+                "name": "conseil_ancrage_local",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "ancrage_local"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "conseil_1": "Interface avec les instances publiques et privées",
+                    "conseil_2": "Concertation et médiation",
+                    "conseil_3": "Coordination du groupe projet",
+                    "conseil_4": "Mobilisation de l’épargne citoyenne",
+                    "conseil_5": "Stratégie et actions de communication",
+                    "conseil_6": "Sensibilisation à l’énergie citoyenne"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599aef5aa973f",
+                "label": "Prestation",
+                "name": "prestation_ancrage_local",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "ancrage_local"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "prestation_1": "Interface avec les instances publiques et privées",
+                    "prestation_2": "Concertation et médiation",
+                    "prestation_3": "Coordination du groupe projet",
+                    "prestation_4": "Mobilisation de l’épargne citoyenne",
+                    "prestation_5": "Stratégie et actions de communication",
+                    "prestation_6": "Sensibilisation à l’énergie citoyenne"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599aef7ca9740",
+                "label": "Formation à dispenser",
+                "name": "formation_ancrage_local",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "ancrage_local"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "formation_1": "Interface avec les instances publiques et privées",
+                    "formation_2": "Concertation et médiation",
+                    "formation_3": "Coordination du groupe projet",
+                    "formation_4": "Mobilisation de l’épargne citoyenne",
+                    "formation_5": "Stratégie et actions de communication",
+                    "formation_6": "Sensibilisation à l’énergie citoyenne"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae18add948",
+                "label": "",
+                "name": "",
+                "aria-label": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "technique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "<h1>Technique<\/h1>",
+                "new_lines": "",
+                "esc_html": 0
+            },
+            {
+                "key": "field_599ae60a19152",
+                "label": "Expériences à partager",
+                "name": "experiences_technique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "technique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "exp_part_1": "Études d’opportunité",
+                    "exp_part_2": "Études de faisabilité",
+                    "exp_part_3": "Assistance à maîtrise d’ouvrage",
+                    "exp_part_4": "Études environnementales",
+                    "exp_part_5": "Autorisations ICPE",
+                    "exp_part_6": "Permis de construire et déclaration de travaux",
+                    "exp_part_7": "Maîtrise foncière",
+                    "exp_part_8": "Évaluation de la conformité de l’installation"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae68519153",
+                "label": "Conseil et accompagnement",
+                "name": "conseil_technique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "technique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "conseil_1": "Études d’opportunité",
+                    "conseil_2": "Études de faisabilité",
+                    "conseil_3": "Assistance à maîtrise d’ouvrage",
+                    "conseil_4": "Études environnementales",
+                    "conseil_5": "Autorisations ICPE",
+                    "conseil_6": "Permis de construire et déclaration de travaux",
+                    "conseil_7": "Maîtrise foncière",
+                    "conseil_8": "Évaluation de la conformité de l’installation"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae6f219154",
+                "label": "Prestation",
+                "name": "prestation_technique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "technique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "prestation_1": "Études d’opportunité",
+                    "prestation_2": "Études de faisabilité",
+                    "prestation_3": "Assistance à maîtrise d’ouvrage",
+                    "prestation_4": "Études environnementales",
+                    "prestation_5": "Autorisations ICPE",
+                    "prestation_6": "Permis de construire et déclaration de travaux",
+                    "prestation_7": "Maîtrise foncière",
+                    "prestation_8": "Évaluation de la conformité de l’installation"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae7c4c719e",
+                "label": "Formation à dispenser",
+                "name": "formation_technique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "technique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "formation_1": "Études d’opportunité",
+                    "formation_2": "Études de faisabilité",
+                    "formation_3": "Assistance à maîtrise d’ouvrage",
+                    "formation_4": "Études environnementales",
+                    "formation_5": "Autorisations ICPE",
+                    "formation_6": "Permis de construire et déclaration de travaux",
+                    "formation_7": "Maîtrise foncière",
+                    "formation_8": "Évaluation de la conformité de l’installation"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae1a4dd949",
+                "label": "",
+                "name": "",
+                "aria-label": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "juridique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "<h1>Juridique<\/h1>",
+                "new_lines": "",
+                "esc_html": 0
+            },
+            {
+                "key": "field_599ae80f2df23",
+                "label": "Expériences à partager",
+                "name": "experiences_juridique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "juridique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "exp_part_1": "Définition, création et vie de la structure porteuse",
+                    "exp_part_2": "Choix et contractualisation d’une assurance",
+                    "exp_part_3": "Gestion des actionnaires",
+                    "exp_part_4": "Gestion préalable des contentieux"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae872cbbaf",
+                "label": "Conseil et accompagnement",
+                "name": "conseil_juridique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "juridique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "conseil_1": "Définition, création et vie de la structure porteuse",
+                    "conseil_2": "Choix et contractualisation d’une assurance",
+                    "conseil_3": "Gestion des actionnaires",
+                    "conseil_4": "Gestion préalable des contentieux"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae875cbbb0",
+                "label": "Prestation",
+                "name": "prestation_juridique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "juridique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "prestation_1": "Définition, création et vie de la structure porteuse",
+                    "prestation_2": "Choix et contractualisation d’une assurance",
+                    "prestation_3": "Gestion des actionnaires",
+                    "prestation_4": "Gestion préalable des contentieux"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae87acbbb1",
+                "label": "Formation à dispenser",
+                "name": "formation_juridique",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "juridique"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "formation_1": "Définition, création et vie de la structure porteuse",
+                    "formation_2": "Choix et contractualisation d’une assurance",
+                    "formation_3": "Gestion des actionnaires",
+                    "formation_4": "Gestion préalable des contentieux"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae22edd94a",
+                "label": "",
+                "name": "",
+                "aria-label": "",
+                "type": "message",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "financier"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "<h1>Financier<\/h1>",
+                "new_lines": "",
+                "esc_html": 0
+            },
+            {
+                "key": "field_599ae91563fa9",
+                "label": "Expériences à partager",
+                "name": "experiences_financier",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "financier"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "exp_part_1": "Business plan \/ Plan d'affaires",
+                    "exp_part_2": "Prêt bancaire \/ Négociation avec les banques",
+                    "exp_part_3": "Intermédiation en fonds propres"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae91863faa",
+                "label": "Conseil et accompagnement",
+                "name": "conseil_financier",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "financier"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "conseil_1": "Business plan \/ Plan d'affaires",
+                    "conseil_2": "Prêt bancaire \/ Négociation avec les banques",
+                    "conseil_3": "Intermédiation en fonds propres"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae91b63fab",
+                "label": "Prestation",
+                "name": "prestation_financier",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "financier"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "prestation_1": "Business plan \/ Plan d'affaires",
+                    "prestation_2": "Prêt bancaire \/ Négociation avec les banques",
+                    "prestation_3": "Intermédiation en fonds propres"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_599ae91f63fac",
+                "label": "Formation à dispenser",
+                "name": "formation_financier",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7ba3952b4c",
+                            "operator": "==",
+                            "value": "financier"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "formation_1": "Business plan \/ Plan d'affaires",
+                    "formation_2": "Prêt bancaire \/ Négociation avec les banques",
+                    "formation_3": "Intermédiation en fonds propres"
+                },
+                "default_value": [],
+                "allow_null": 1,
+                "multiple": 1,
+                "ui": 1,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_59775cd4adfd4",
+                "label": "Compétences complémentaires",
+                "name": "competences_complementaires",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_59775de51e9b1",
+                "label": "Projets associés",
+                "name": "projets_associes",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Ajouter un projet",
+                "sub_fields": [
+                    {
+                        "key": "field_59775ee61e9b2",
+                        "label": "Nom du projet",
+                        "name": "nom_projet",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_59775de51e9b1"
+                    },
+                    {
+                        "key": "field_59775efb1e9b3",
+                        "label": "Filière",
+                        "name": "filiere_projet",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "eolien": "Éolien",
+                            "hydroelectricite": "Hydroélectricité",
+                            "photovoltaique": "Photovoltaïque",
+                            "solaire_au_sol": "Solaire au sol",
+                            "methanisation": "Méthanisation",
+                            "bois_energie": "Bois énergie",
+                            "maitrise_energie": "Maîtrise de l’énergie"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "value",
+                        "placeholder": "",
+                        "parent_repeater": "field_59775de51e9b1"
+                    },
+                    {
+                        "key": "field_59776a7107543",
+                        "label": "Commune \/ région",
+                        "name": "localisation_projet",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_59775de51e9b1"
+                    },
+                    {
+                        "key": "field_59776a8e07544",
+                        "label": "Nom du porteur",
+                        "name": "nom_porteur_projet",
+                        "aria-label": "",
+                        "type": "text",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": "",
+                        "parent_repeater": "field_59775de51e9b1"
+                    },
+                    {
+                        "key": "field_59776b2d584f6",
+                        "label": "Descriptif",
+                        "name": "descriptif_projet",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": "",
+                        "parent_repeater": "field_59775de51e9b1"
+                    },
+                    {
+                        "key": "field_59776aac07545",
+                        "label": "Interventions réalisées",
+                        "name": "interventions_realisees",
+                        "aria-label": "",
+                        "type": "textarea",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 5,
+                        "new_lines": "br",
+                        "parent_repeater": "field_59775de51e9b1"
+                    },
+                    {
+                        "key": "field_59776ac7139cc",
+                        "label": "Montant d’investissement",
+                        "name": "montant_investissement",
+                        "aria-label": "",
+                        "type": "select",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "choices": {
+                            "inf_200k": "moins de 200 000 €",
+                            "200k_500k": "entre 200 000 € et 500 000 €",
+                            "500k_1m": "entre 500 000 € et 1 000 000 €",
+                            "1m_5m": "entre 1 000 000 € et 5 000 000 €",
+                            "5m_10m": "entre 5 000 000 € et 10 000 000 €",
+                            "10m_25m": "entre 10 000 000 € et 25 000 000 €"
+                        },
+                        "default_value": [],
+                        "allow_null": 0,
+                        "multiple": 0,
+                        "ui": 0,
+                        "ajax": 0,
+                        "return_format": "label",
+                        "placeholder": "",
+                        "parent_repeater": "field_59775de51e9b1"
+                    }
+                ],
+                "rows_per_page": 20
+            },
+            {
+                "key": "field_599ad80225742",
+                "label": "Commentaire libre",
+                "name": "commentaire_libre",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 5,
+                "new_lines": "br"
+            },
+            {
+                "key": "field_59a7b322e2dbc",
+                "label": "Critères d'intervention",
+                "name": "criteres_dintervention",
+                "aria-label": "",
+                "type": "true_false",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "message": "",
+                "default_value": 0,
+                "ui": 0,
+                "ui_on_text": "",
+                "ui_off_text": ""
+            },
+            {
+                "key": "field_59a7b6544b5c1",
+                "label": "Détails des critères",
+                "name": "details_des_criteres",
+                "aria-label": "",
+                "type": "text",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_59a7b322e2dbc",
+                            "operator": "==",
+                            "value": "1"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "repertoire"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content"
+        ],
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    },
+    {
+        "key": "group_59885cd0c214d",
+        "title": "Ressource du réseau",
+        "fields": [
+            {
+                "key": "field_5aa7e6cb6897b",
+                "label": "Type de document",
+                "name": "type_document",
+                "aria-label": "",
+                "type": "select",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "choices": {
+                    "document": "Document partagé",
+                    "webinaire": "Webinaire",
+                    "question": "Question\/réponse"
+                },
+                "default_value": [],
+                "allow_null": 0,
+                "multiple": 0,
+                "ui": 0,
+                "ajax": 0,
+                "return_format": "label",
+                "placeholder": ""
+            },
+            {
+                "key": "field_5aaf9f46f2cbd",
+                "label": "Documents à télécharger",
+                "name": "fichiers_documents",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5aa7e6cb6897b",
+                            "operator": "==",
+                            "value": "document"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layout": "block",
+                "pagination": 0,
+                "min": 0,
+                "max": 0,
+                "collapsed": "",
+                "button_label": "Ajouter un document",
+                "rows_per_page": 20,
+                "sub_fields": [
+                    {
+                        "key": "field_5aaf9f8bf2cbe",
+                        "label": "Document",
+                        "name": "document",
+                        "aria-label": "",
+                        "type": "file",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "parent_repeater": "field_5aaf9f46f2cbd"
+                    }
+                ]
+            },
+            {
+                "key": "field_5b449bff4ee4c",
+                "label": "Documents à télécharger",
+                "name": "fichiers_documents_autre",
+                "aria-label": "",
+                "type": "repeater",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": [
+                    [
+                        {
+                            "field": "field_5aa7e6cb6897b",
+                            "operator": "!=",
+                            "value": "document"
+                        }
+                    ]
+                ],
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "block",
+                "button_label": "Ajouter un document",
+                "sub_fields": [
+                    {
+                        "key": "field_5b449bff4ee4d",
+                        "label": "Document",
+                        "name": "document",
+                        "aria-label": "",
+                        "type": "file",
+                        "instructions": "",
+                        "required": 1,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "array",
+                        "library": "all",
+                        "min_size": "",
+                        "max_size": "",
+                        "mime_types": "",
+                        "parent_repeater": "field_5b449bff4ee4c"
+                    }
+                ],
+                "rows_per_page": 20
+            },
+            {
+                "key": "field_59f0a786b5990",
+                "label": "Extrait",
+                "name": "extrait_liste",
+                "aria-label": "",
+                "type": "textarea",
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "documents"
+                }
+            ]
+        ],
+        "menu_order": 1,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": true,
+        "description": "",
+        "show_in_rest": 0
+    },
+    {
+        "key": "group_5a295f194e59f",
+        "title": "Fluxi content",
+        "fields": [
+            {
+                "key": "field_5a295f19514db",
+                "label": "Eléments de mise en page",
+                "name": "elements_fluxi",
+                "aria-label": "",
+                "type": "flexible_content",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "layouts": {
+                    "5630b9874805c": {
+                        "key": "5630b9874805c",
+                        "name": "titre",
+                        "label": "Titre",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f19586ec",
+                                "label": "Taille du titre",
+                                "name": "taille_titre",
+                                "aria-label": "",
+                                "type": "radio",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "2": "H1",
+                                    "3": "H2 (segmente un contenu entamé par un H1)"
+                                },
+                                "allow_null": 0,
+                                "other_choice": 0,
+                                "save_other_choice": 0,
+                                "default_value": "2 : H1",
+                                "layout": "horizontal",
+                                "return_format": "value"
+                            },
+                            {
+                                "key": "field_5a295f195875a",
+                                "label": "Texte",
+                                "name": "texte_titre",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5630b9c64805d": {
+                        "key": "5630b9c64805d",
+                        "name": "texte",
+                        "label": "Texte",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f19587c5",
+                                "label": "Texte",
+                                "name": "texte",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "Pour éviter des problèmes de mise en page liés à des copier\/coller d'une source externe vers Wordpress, utilisez le \"coller en texte\" disponible dans la barre d'outils.",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "tabs": "visual",
+                                "toolbar": "full",
+                                "media_upload": 0,
+                                "default_value": "",
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5630ba063cca2": {
+                        "key": "5630ba063cca2",
+                        "name": "image",
+                        "label": "Image",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f1958831",
+                                "label": "Image",
+                                "name": "image",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "thumbnail",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_5ee73313dbe70",
+                                "label": "Afficher l’image dans sa qualité d’origine",
+                                "name": "full_size_image",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "",
+                                "default_value": 0,
+                                "ui": 1,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5a17027d0f201": {
+                        "key": "5a17027d0f201",
+                        "name": "image_texte",
+                        "label": "Image & Texte",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f195889d",
+                                "label": "Image",
+                                "name": "image",
+                                "aria-label": "",
+                                "type": "image",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "return_format": "array",
+                                "preview_size": "medium",
+                                "library": "all",
+                                "min_width": "",
+                                "min_height": "",
+                                "min_size": "",
+                                "max_width": "",
+                                "max_height": "",
+                                "max_size": "",
+                                "mime_types": ""
+                            },
+                            {
+                                "key": "field_5a295f195890a",
+                                "label": "Titre",
+                                "name": "titre",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5a295f1958975",
+                                "label": "Texte",
+                                "name": "texte",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "maxlength": "",
+                                "rows": "",
+                                "new_lines": ""
+                            },
+                            {
+                                "key": "field_5a295f19589e0",
+                                "label": "Ajouter un lien",
+                                "name": "ajouter_lien",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "",
+                                "default_value": 0,
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            },
+                            {
+                                "key": "field_5a295f1958a54",
+                                "label": "Texte du lien",
+                                "name": "texte_lien",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5a295f19589e0",
+                                            "operator": "==",
+                                            "value": "1"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": "",
+                                "maxlength": ""
+                            },
+                            {
+                                "key": "field_5a295f1958ac1",
+                                "label": "Adresse du lien",
+                                "name": "adresse_lien",
+                                "aria-label": "",
+                                "type": "url",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5a295f19589e0",
+                                            "operator": "==",
+                                            "value": "1"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": ""
+                            },
+                            {
+                                "key": "field_5a295f1958b2d",
+                                "label": "Ouvrir dans une nouvelle fenêtre",
+                                "name": "lien_externe",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "Vous pouvez sélectionner plusieurs options",
+                                "required": 0,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5a295f19589e0",
+                                            "operator": "==",
+                                            "value": "1"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "message": "",
+                                "default_value": 0,
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "56fe8088a7b6f": {
+                        "key": "56fe8088a7b6f",
+                        "name": "citation",
+                        "label": "Citation",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f1958b98",
+                                "label": "Citation",
+                                "name": "citation",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "new_lines": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "rows": 5,
+                                "readonly": 0,
+                                "disabled": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5885d79e678dd": {
+                        "key": "5885d79e678dd",
+                        "name": "lien",
+                        "label": "Lien",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f1958c04",
+                                "label": "Texte du lien",
+                                "name": "texte_lien",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_5a295f1958c6f",
+                                "label": "Url du lien",
+                                "name": "url_lien",
+                                "aria-label": "",
+                                "type": "url",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "https:\/\/"
+                            },
+                            {
+                                "key": "field_5a295f1958cda",
+                                "label": "Option du lien",
+                                "name": "type_lien",
+                                "aria-label": "",
+                                "type": "select",
+                                "instructions": "Cochez cette case pour afficher le lien texte en mode bouton. Le texte du lien doit être relativement court pour s'afficher correctement.",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "choices": {
+                                    "externe": "Lien externe",
+                                    "bouton": "Bouton"
+                                },
+                                "default_value": [],
+                                "allow_null": 1,
+                                "multiple": 1,
+                                "ui": 1,
+                                "ajax": 0,
+                                "return_format": "value",
+                                "placeholder": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5885d445678d9": {
+                        "key": "5885d445678d9",
+                        "name": "focus",
+                        "label": "Focus",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f1958d45",
+                                "label": "Titre du bloc focus",
+                                "name": "titre_focus",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_5a295f1958dbf",
+                                "label": "Texte du bloc focus",
+                                "name": "texte_focus",
+                                "aria-label": "",
+                                "type": "textarea",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "new_lines": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "rows": 4
+                            },
+                            {
+                                "key": "field_5a295f1958e2e",
+                                "label": "Ajouter un lien au bloc focus",
+                                "name": "ajouter_lien_focus",
+                                "aria-label": "",
+                                "type": "true_false",
+                                "instructions": "",
+                                "required": 0,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": 0,
+                                "message": "",
+                                "ui": 0,
+                                "ui_on_text": "",
+                                "ui_off_text": ""
+                            },
+                            {
+                                "key": "field_5a295f1958e9e",
+                                "label": "Texte du lien",
+                                "name": "texte_lien",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5a295f1958e2e",
+                                            "operator": "==",
+                                            "value": "1"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_5a295f1958f19",
+                                "label": "Url du lien",
+                                "name": "url_lien",
+                                "aria-label": "",
+                                "type": "url",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": [
+                                    [
+                                        {
+                                            "field": "field_5a295f1958e2e",
+                                            "operator": "==",
+                                            "value": "1"
+                                        }
+                                    ]
+                                ],
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "placeholder": "https:\/\/"
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5886091763106": {
+                        "key": "5886091763106",
+                        "name": "accordeon",
+                        "label": "Accordéon",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f1958f8c",
+                                "label": "Titre de l'accordéon",
+                                "name": "titre_accordeon",
+                                "aria-label": "",
+                                "type": "text",
+                                "instructions": "Titre cliquable toujours visible qui permet de déployer l'accordéon.",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "maxlength": "",
+                                "placeholder": "",
+                                "prepend": "",
+                                "append": ""
+                            },
+                            {
+                                "key": "field_5a295f1973398",
+                                "label": "Texte dans l'accordéon",
+                                "name": "texte",
+                                "aria-label": "",
+                                "type": "wysiwyg",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "default_value": "",
+                                "tabs": "visual",
+                                "toolbar": "full",
+                                "media_upload": 0,
+                                "delay": 0
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    },
+                    "5630d415a1c35": {
+                        "key": "5630d415a1c35",
+                        "name": "code",
+                        "label": "Insérer une vidéo",
+                        "display": "row",
+                        "sub_fields": [
+                            {
+                                "key": "field_5a295f1959074",
+                                "label": "Insérer une vidéo",
+                                "name": "code",
+                                "aria-label": "",
+                                "type": "oembed",
+                                "instructions": "",
+                                "required": 1,
+                                "conditional_logic": 0,
+                                "wrapper": {
+                                    "width": "",
+                                    "class": "",
+                                    "id": ""
+                                },
+                                "width": "",
+                                "height": ""
+                            }
+                        ],
+                        "min": "",
+                        "max": ""
+                    }
+                },
+                "button_label": "Ajouter un élément de mise en page",
+                "min": "",
+                "max": ""
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page_template",
+                    "operator": "==",
+                    "value": "default"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "formation"
+                }
+            ],
+            [
+                {
+                    "param": "post_type",
+                    "operator": "==",
+                    "value": "documents"
+                }
+            ]
+        ],
+        "menu_order": 2,
+        "position": "acf_after_title",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": [
+            "the_content",
+            "featured_image"
+        ],
+        "active": true,
+        "description": "",
+        "show_in_rest": false
+    }
+]

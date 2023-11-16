@@ -63,7 +63,7 @@ module.exports = function (grunt) {
 		    options: {
 		        map: false,
 		        processors: [
-		          	require('autoprefixer')({browsers: ['last 2 versions']}),
+		          	require('autoprefixer')({overrideBrowserslist: ['last 2 versions']}),
 		          	require('cssnano')()
 		        ]
 			},
@@ -86,7 +86,7 @@ module.exports = function (grunt) {
 	        }
 		},
 
-		
+
 
 	});
 
